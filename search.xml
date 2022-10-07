@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/dpkg%E7%AE%A1%E7%90%86deb%E5%8C%85/"/>
+      <url>/dpkg%E7%AE%A1%E7%90%86deb%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="dpkg管理deb包"><a href="#dpkg管理deb包" class="headerlink" title="dpkg管理deb包"></a>dpkg管理deb包</h1><p>title: dpkg管理deb包<br>date: 2022-7-21 17:26:44<br>tags:</p><ul><li>ubuntu<br>categories: 运维</li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i deb文件名</span><br></pre></td></tr></table></figure><h2 id="修复依赖"><a href="#修复依赖" class="headerlink" title="修复依赖"></a>修复依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -f</span><br></pre></td></tr></table></figure><h2 id="查找已经安装的"><a href="#查找已经安装的" class="headerlink" title="查找已经安装的"></a>查找已经安装的</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -l</span><br><span class="line">dpkg -l | grep ssh</span><br></pre></td></tr></table></figure><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -r 软件名</span><br></pre></td></tr></table></figure><p>卸载包的时候如果有其他的包依赖这个包，是无法卸载的，需要把依赖的这个包卸载了，再卸载被依赖的包。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/hello-world/"/>
       <url>/hello-world/</url>
