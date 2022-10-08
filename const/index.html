@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>const | 博文</title><meta name="keywords" content="Go基础"><meta name="author" content="博文"><meta name="copyright" content="博文"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="✏️ 部分内容是观看李文周老师的视频的做的笔记，部分是学习极客时间专栏做的笔记 常量定义了之后就不能修改，程序运行期间不能改变。常量一般定义在程序开头，不写在程序尾部。 原始定义1const pai &#x3D; 3.1415926  多个常量同时定义1234const (	statusok       &#x3D; 200	statusnotfound &#x3D; 404)  默认值123456const (	n1 &#x3D; 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="const">
+<meta property="og:url" content="https://sunnydongbowen.github.io/const/index.html">
+<meta property="og:site_name" content="博文">
+<meta property="og:description" content="✏️ 部分内容是观看李文周老师的视频的做的笔记，部分是学习极客时间专栏做的笔记 常量定义了之后就不能修改，程序运行期间不能改变。常量一般定义在程序开头，不写在程序尾部。 原始定义1const pai &#x3D; 3.1415926  多个常量同时定义1234const (	statusok       &#x3D; 200	statusnotfound &#x3D; 404)  默认值123456const (	n1 &#x3D; 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-08T06:28:39.000Z">
+<meta property="article:modified_time" content="2022-10-08T08:48:37.963Z">
+<meta property="article:author" content="博文">
+<meta property="article:tag" content="Go基础">
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/xx.jpg"><link rel="canonical" href="https://sunnydongbowen.github.io/const/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"HLT03CFE0Y","apiKey":"f10d296a77a800e060c4ca219a883d6c","indexName":"hexo_bowen","hits":{"per_page":100},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'const',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-08 16:48:37'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ee.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">博文</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">const</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-08T06:28:39.000Z" title="发表于 2022-10-08 14:28:39">2022-10-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-08T08:48:37.963Z" title="更新于 2022-10-08 16:48:37">2022-10-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Go/">Go</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="const"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>✏️ 部分内容是观看李文周老师的视频的做的笔记，部分是学习极客时间专栏做的笔记</p>
+<p>常量定义了之后就不能修改，程序运行期间不能改变。常量一般定义在程序开头，不写在程序尾部。</p>
+<h2 id="原始定义"><a href="#原始定义" class="headerlink" title="原始定义"></a>原始定义</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pai = <span class="number">3.1415926</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="多个常量同时定义"><a href="#多个常量同时定义" class="headerlink" title="多个常量同时定义"></a>多个常量同时定义</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	statusok       = <span class="number">200</span></span><br><span class="line">	statusnotfound = <span class="number">404</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	n1 = <span class="number">100</span></span><br><span class="line">	n2 <span class="comment">// 如果后面没有写值，默认和上面一行一样！</span></span><br><span class="line">	n3</span><br><span class="line">)</span><br><span class="line">fmt.Println(n1, n2, n3)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span> <span class="number">100</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<p>上面三个例子可以观察到，常量赋值了，而且<code>必须赋值</code>。是不会有默认值的。比如</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a <span class="type">int</span></span><br></pre></td></tr></table></figure>
+
+<p>这样声明是错误的，Goland或者是其他编辑器会给出提示，并且编译也是过不去的。而且<code>定义常量也是不需要定义类型的</code>，多次一举！</p>
+<h2 id="iota"><a href="#iota" class="headerlink" title="iota"></a>iota</h2><p><code>iota</code>是go语言的常量计数器，只能在常量的表达式中使用。</p>
+<p><code>iota</code>在const关键字出现时将被重置为0。const中每新增一行常量声明将使<code>iota</code>计数一次(iota可理解为const语句块中的行索引)。 使用iota能简化定义，在定义枚举时很有用。</p>
+<ul>
+<li>每遇到一个<strong>关键字const</strong>，自动清零</li>
+<li>每换行一次，自动加1</li>
+</ul>
+<h3 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	c1 = <span class="literal">iota</span> <span class="comment">// 默认是0，const出现的时候重置为0，**const中每加1行，iota就加1**</span></span><br><span class="line">	c2        <span class="comment">// = iota</span></span><br><span class="line">	c3        <span class="comment">// = iota</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	m1 = <span class="literal">iota</span>   <span class="comment">//0  </span></span><br><span class="line">	m2 = <span class="number">100</span>    <span class="comment">//iota+1  1</span></span><br><span class="line">	m3 = <span class="literal">iota</span>   <span class="comment">//iota+1  2</span></span><br><span class="line">	m4          <span class="comment">// 3</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">100</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例3"><a href="#示例3" class="headerlink" title="示例3"></a>示例3</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	m1 = <span class="literal">iota</span>   <span class="comment">// 0 </span></span><br><span class="line">	m2 = <span class="number">100</span>    <span class="comment">// 100</span></span><br><span class="line">	m3          <span class="comment">// 100</span></span><br><span class="line">	m4          <span class="comment">// 100</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">100</span> <span class="number">100</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例4"><a href="#示例4" class="headerlink" title="示例4"></a>示例4</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	q1, q2 = <span class="literal">iota</span> + <span class="number">1</span>, <span class="literal">iota</span> + <span class="number">2</span>   <span class="comment">// 1 2  这一行，iota还是0，要注意这个坑！</span></span><br><span class="line">	q3, q4 = <span class="literal">iota</span> + <span class="number">1</span>, <span class="literal">iota</span> + <span class="number">2</span>   <span class="comment">// 2,3  一般不这么用，只有面试或者刷算法才会这么做</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="匿名变量与iota"><a href="#匿名变量与iota" class="headerlink" title="匿名变量与iota"></a>匿名变量与iota</h2><p>当有些数据必须用变量接收，但又不使用它时，就可以用_来接收这个值。<code>哑元变量</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	a1 = <span class="literal">iota</span></span><br><span class="line">	a2</span><br><span class="line">	_    <span class="comment">// 这是匿名变量，也增加了一行，所以a3=3！</span></span><br><span class="line">	a3</span><br><span class="line">)</span><br><span class="line">fmt.Println(a1, a2, a3)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="iota定义数量级"><a href="#iota定义数量级" class="headerlink" title="iota定义数量级"></a>iota定义数量级</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义数量级</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	_  = <span class="literal">iota</span></span><br><span class="line">	KB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>) <span class="comment">// 左移10位，2的10次方，1024  10000000000</span></span><br><span class="line">	MB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>) <span class="comment">// 1MB =1024KB, 移动20位</span></span><br><span class="line">	GB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">	TB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>out</code></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1024</span> <span class="number">1048576</span> <span class="number">1073741824</span> <span class="number">1099511627776</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="无类型常量"><a href="#无类型常量" class="headerlink" title="无类型常量"></a>无类型常量</h2><p>Go 语言对类型安全是有严格要求的：<code>即便两个类型拥有着相同的底层类型，但它们仍然是不同的数据类型，不可以被相互比较或混在一个表达式中进行运算</code>。这一要求不仅仅适用于变量，也同样适用于有类型常量（Typed Constant）中，你可以在下面代码中看出这一点：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> myInt <span class="type">int</span></span><br><span class="line"><span class="keyword">const</span> n myInt = <span class="number">13</span></span><br><span class="line"><span class="keyword">const</span> m <span class="type">int</span> = n + <span class="number">5</span> <span class="comment">// 编译器报错：cannot use n + 5 (type myInt) as type int in const initializer</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a <span class="type">int</span> = <span class="number">5</span></span><br><span class="line">    fmt.Println(a + n) <span class="comment">// 编译器报错：invalid operation: a + n (mismatched types int and myInt)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面这段代码如果是在Goland中编写，那么在没有编译前，Goland就会给你飘红了。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> myInt <span class="type">int</span></span><br><span class="line"><span class="keyword">const</span> n myInt = <span class="number">13</span></span><br><span class="line"><span class="keyword">const</span> m <span class="type">int</span> = <span class="type">int</span>(n) + <span class="number">5</span>  <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a <span class="type">int</span> = <span class="number">5</span></span><br><span class="line">    fmt.Println(a + <span class="type">int</span>(n))  <span class="comment">// 输出：18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了进行<code>显式的强制类型转换</code>，还有方法解决这个问题吗？其实在我们第一节的时候，声明不加类型就可以了。看下面的代码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> myInt <span class="type">int</span></span><br><span class="line"><span class="keyword">const</span> n = <span class="number">13</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a myInt = <span class="number">5</span></span><br><span class="line">    fmt.Println(a + n)  <span class="comment">// 输出：18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个代码中，常量 n 在声明时并没有显式地被赋予类型，在 Go 中，这样的常量就被称为<code>无类型常量（Untyped Constant）</code>。不过，无类型常量也不是说就真的没有类型，它也有自己的默认类型，不过它的默认类型是根据它的初值形式来决定的。像上面代码中的常量 n 的初值为整数形式，所以它的默认类型为 int。</p>
+<h2 id="隐式转型"><a href="#隐式转型" class="headerlink" title="隐式转型"></a>隐式转型</h2><p>隐式转型说的就是，对于无类型常量参与的表达式求值，Go 编译器会根据上下文中的类型信息，把无类型常量自动转换为相应的类型后，再参与求值计算，这一转型动作是隐式进行的。但由于转型的对象是一个常量，所以这并不会引发类型安全问题，Go 编译器会保证这一转型的安全性。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1333333333</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> k <span class="type">int8</span> = <span class="number">1</span></span><br><span class="line">j := k + m <span class="comment">// 编译器报错：constant 1333333333 overflows int8</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到，无类型常量与常量隐式转型的“珠联璧合”使得在 Go 这样的具有强类型系统的语言，在处理表达式混合数据类型运算的时候具有比较大的灵活性，代码编写也得到了一定程度的简化。也就是说，我们不需要在求值表达式中做任何显式。<code>在实际编程中，声明常量时，尽量使用无类型声明，也就是第一章节那样，不需要加数据类型</code>。</p>
+<p>所以要注意隐式转型的坑！会将常量转型到另外一个已知的数据类型。如果进行计算，可能会出现超出范围等错误。</p>
+<h2 id="iota进阶"><a href="#iota进阶" class="headerlink" title="iota进阶"></a>iota进阶</h2><h3 id="从1开始接收"><a href="#从1开始接收" class="headerlink" title="从1开始接收"></a>从1开始接收</h3><p>想要略过 iota &#x3D; 0，从 iota &#x3D; 1 开始正式定义枚举常量，我们可以效仿下面标准库中的代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $GOROOT/src/syscall/net_js.go</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    _ = <span class="literal">iota</span></span><br><span class="line">    IPV6_V6ONLY  <span class="comment">// 1</span></span><br><span class="line">    SOMAXCONN    <span class="comment">// 2</span></span><br><span class="line">    SO_ERROR     <span class="comment">// 3</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>在这个代码里，我们使用了空白标识符作为第一个枚举常量，它的值就是 iota。虽然它本身没有实际意义，但后面的常量值都会重复它的初值表达式（这里是 iota），于是我们真正的枚举常量值就从 1 开始了。</p>
+<h3 id="枚举不连续"><a href="#枚举不连续" class="headerlink" title="枚举不连续"></a>枚举不连续</h3><p>如果我们的枚举常量值并不连续，而是要略过某一个或几个值，又要怎么办呢？我们也可以借助空白标识符来实现，如下面这个代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    _ = <span class="literal">iota</span> <span class="comment">// 0</span></span><br><span class="line">    Pin1</span><br><span class="line">    Pin2</span><br><span class="line">    Pin3</span><br><span class="line">    _</span><br><span class="line">    Pin5    <span class="comment">// 5   </span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，在上面这个枚举定义中，枚举常量集合中没有 Pin4。为了略过 Pin4，我们在它的位置上使用了空白标识符。这样，Pin5 就会重复 Pin3，也就是向上数首个不为空的常量标识符的值，这里就是 iota，而且由于它所在行的偏移值为 5，因此 Pin5 的值也为 5，这样我们成功略过了 Pin4 这个枚举常量以及 4 这个枚举值。</p>
+<h3 id="枚举更加容易"><a href="#枚举更加容易" class="headerlink" title="枚举更加容易"></a>枚举更加容易</h3><p>iota 特性让我们维护枚举常量列表变得更加容易。比如我们使用传统的枚举常量声明方式，来声明一组按首字母排序的“颜色”常量，也就是这样：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ( </span><br><span class="line">    Black  = <span class="number">1</span> </span><br><span class="line">    Red    = <span class="number">2</span></span><br><span class="line">    Yellow = <span class="number">3</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>假如这个时候，我们要增加一个新颜色 Blue。那根据字母序，这个新常量应该放在 Red 的前面呀。但这样一来，我们就需要像下面代码这样将 Red 到 Yellow 的常量值都手动加 1，十分费力。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    Blue   = <span class="number">1</span></span><br><span class="line">    Black  = <span class="number">2</span></span><br><span class="line">    Red    = <span class="number">3</span></span><br><span class="line">    Yellow = <span class="number">4</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>那如果我们使用 iota 重新定义这组“颜色”枚举常量是不是可以更方便呢？我们可以像下面代码这样试试看：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    _ = <span class="literal">iota</span>     </span><br><span class="line">    Blue</span><br><span class="line">    Red </span><br><span class="line">    Yellow     </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>这样，无论后期我们需要增加多少种颜色，我们只需将常量名插入到对应位置就可以，其他就不需要再做任何手工调整了。</p>
+<h3 id="独立变化"><a href="#独立变化" class="headerlink" title="独立变化"></a>独立变化</h3><p>如果一个 Go 源文件中有多个 const 代码块定义的不同枚举，每个 const 代码块中的 iota 也是独立变化的，也就是说，每个 const 代码块都拥有属于自己的 iota，如下面代码所示：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    a = <span class="literal">iota</span> + <span class="number">1</span> <span class="comment">// 1, iota = 0</span></span><br><span class="line">    b            <span class="comment">// 2, iota = 1</span></span><br><span class="line">    c            <span class="comment">// 3, iota = 2</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    i = <span class="literal">iota</span> &lt;&lt; <span class="number">1</span> <span class="comment">// 0, iota = 0</span></span><br><span class="line">    j             <span class="comment">// 2, iota = 1</span></span><br><span class="line">    k             <span class="comment">// 4, iota = 2</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，每个 iota 的生命周期都始于一个 const 代码块的开始，在该 const 代码块结束时结束。</p>
+<p>这段代码还要注意的是，b和c并非是默认是a的值1，而是跟着iota一起加1. 第二个j和k也是一样。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>可以不写类型</li>
+<li>要赋值</li>
+</ul>
+<p>常量是一种在源码编译期间被创建的语法元素，它的值在程序的生命周期内保持不变。所有常量的求值计算都是在编译期完成的，而不是在运行期，这样可以减少运行时的工作，也方便编译器进行编译优化。另外，当操作数是常量表达式时，一些运行时的错误也可以在编译时被发现，例如整数除零、字符串索引越界等。</p>
+<p>Go 语言原生提供了对常量的支持，所以我们可以避免像 C 语言那样，使用宏定义常量，这比较复杂，也容易发生错误。而且，Go 编译器还为我们提供的类型安全的保证。</p>
+<p>无类型常量，这是 Go 在常量方面的创新。无类型常量拥有和字面值一样的灵活性，它可以直接参与到表达式求值中，而不需要使用显式地类型转换。这得益于 Go 对常量的另一个创新：隐式转型，也就是将无类型常量的默认类型自动隐式转换为求值上下文中所需要的类型，并且这一过程由 Go 编译器保证安全性，这大大简化了代码编写。</p>
+<p>此外，Go 常量还“移植”并改良了前辈 C 语言的枚举类型的特性，在 const 代码块中支持自动重复上一行和 iota 行偏移量指示器。这样我们就可以使用 Go 常量语法来实现枚举常量的定义。并且，基于 Go 常量特性的枚举定义十分灵活，维护起来也更为简便。比如，我们可以选择以任意数值作为枚举值列表的起始值，也可以定义不连续枚举常量，添加和删除有序枚举常量时也不需要手工调整枚举的值。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunnydongbowen.github.io">博文</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunnydongbowen.github.io/const/">https://sunnydongbowen.github.io/const/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunnydongbowen.github.io" target="_blank">博文</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Go%E5%9F%BA%E7%A1%80/">Go基础</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/var/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">var</div></div></a></div><div class="next-post pull-right"><a href="/%E6%B3%A8%E9%87%8A%E4%B8%8E%E6%A0%BC%E5%BC%8F/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">注释与格式</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/switch-case/" title="switch-case"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-08</div><div class="title">switch-case</div></div></a></div><div><a href="/var/" title="var"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-08</div><div class="title">var</div></div></a></div><div><a href="/%E5%87%BD%E6%95%B0-%E7%9F%A5%E4%B9%8E%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="函数~知乎专栏学习笔记"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-08</div><div class="title">函数~知乎专栏学习笔记</div></div></a></div><div><a href="/%E6%B3%A8%E9%87%8A%E4%B8%8E%E6%A0%BC%E5%BC%8F/" title="注释与格式"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-08</div><div class="title">注释与格式</div></div></a></div><div><a href="/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" title="获取用户输入的两种方式"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-08</div><div class="title">获取用户输入的两种方式</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/ee.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">博文</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">原始定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E5%B8%B8%E9%87%8F%E5%90%8C%E6%97%B6%E5%AE%9A%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">多个常量同时定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">默认值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iota"><span class="toc-number">4.</span> <span class="toc-text">iota</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B1"><span class="toc-number">4.1.</span> <span class="toc-text">示例1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B2"><span class="toc-number">4.2.</span> <span class="toc-text">示例2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B3"><span class="toc-number">4.3.</span> <span class="toc-text">示例3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B4"><span class="toc-number">4.4.</span> <span class="toc-text">示例4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%8F%98%E9%87%8F%E4%B8%8Eiota"><span class="toc-number">5.</span> <span class="toc-text">匿名变量与iota</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iota%E5%AE%9A%E4%B9%89%E6%95%B0%E9%87%8F%E7%BA%A7"><span class="toc-number">6.</span> <span class="toc-text">iota定义数量级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%B1%BB%E5%9E%8B%E5%B8%B8%E9%87%8F"><span class="toc-number">7.</span> <span class="toc-text">无类型常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text">隐式转型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iota%E8%BF%9B%E9%98%B6"><span class="toc-number">9.</span> <span class="toc-text">iota进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E1%E5%BC%80%E5%A7%8B%E6%8E%A5%E6%94%B6"><span class="toc-number">9.1.</span> <span class="toc-text">从1开始接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E4%B8%8D%E8%BF%9E%E7%BB%AD"><span class="toc-number">9.2.</span> <span class="toc-text">枚举不连续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E6%9B%B4%E5%8A%A0%E5%AE%B9%E6%98%93"><span class="toc-number">9.3.</span> <span class="toc-text">枚举更加容易</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E5%8F%98%E5%8C%96"><span class="toc-number">9.4.</span> <span class="toc-text">独立变化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">10.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%87%BD%E6%95%B0-%E7%9F%A5%E4%B9%8E%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="函数~知乎专栏学习笔记"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="函数~知乎专栏学习笔记"/></a><div class="content"><a class="title" href="/%E5%87%BD%E6%95%B0-%E7%9F%A5%E4%B9%8E%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="函数~知乎专栏学习笔记">函数~知乎专栏学习笔记</a><time datetime="2022-10-08T10:56:32.000Z" title="发表于 2022-10-08 18:56:32">2022-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/var/" title="var"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="var"/></a><div class="content"><a class="title" href="/var/" title="var">var</a><time datetime="2022-10-08T08:49:39.000Z" title="发表于 2022-10-08 16:49:39">2022-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/const/" title="const"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="const"/></a><div class="content"><a class="title" href="/const/" title="const">const</a><time datetime="2022-10-08T06:28:39.000Z" title="发表于 2022-10-08 14:28:39">2022-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%B3%A8%E9%87%8A%E4%B8%8E%E6%A0%BC%E5%BC%8F/" title="注释与格式"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="注释与格式"/></a><div class="content"><a class="title" href="/%E6%B3%A8%E9%87%8A%E4%B8%8E%E6%A0%BC%E5%BC%8F/" title="注释与格式">注释与格式</a><time datetime="2022-10-08T06:18:02.000Z" title="发表于 2022-10-08 14:18:02">2022-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/switch-case/" title="switch-case"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="switch-case"/></a><div class="content"><a class="title" href="/switch-case/" title="switch-case">switch-case</a><time datetime="2022-10-08T04:53:25.000Z" title="发表于 2022-10-08 12:53:25">2022-10-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 博文</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
