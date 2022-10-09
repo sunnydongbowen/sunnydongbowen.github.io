@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Split切割文件名</title>
+      <link href="/Split%E5%88%87%E5%89%B2%E6%96%87%E4%BB%B6%E5%90%8D/"/>
+      <url>/Split%E5%88%87%E5%89%B2%E6%96%87%E4%BB%B6%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>✏️ 在编写日志库中用到的，和python里的字符串split()用法类似，py里直接是<code>strname.split(</code>)就出来了切割出文件名后，再加-err拼接成err日志名, <strong>以后遇到类似的需求，要想到这个小demo</strong>！</p></blockquote><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">filestr := <span class="string">&quot;file.log&quot;</span></span><br><span class="line">fileSp := strings.Split(filestr, <span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">fmt.Printf(fileSp)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>out</code></p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file</span><br></pre></td></tr></table></figure><p>如果strings.Split(filestr, “.”)[0]，索引换成1，输出的就是log</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Go </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Go基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自定义类型和类型别名</title>
       <link href="/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/"/>
       <url>/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/</url>
