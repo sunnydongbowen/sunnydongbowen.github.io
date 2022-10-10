@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Go并发编程实战笔记之http | 博文</title><meta name="keywords" content="Go Web"><meta name="author" content="博文"><meta name="copyright" content="博文"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="✏️ 阅读汪明的《Go并发编程实战第11章做的笔记  net&#x2F;http简介Go语言中对web服务器端的编程提供了很好的支持，标准库中的net&#x2F;http包提供了很多Web服务相关的API，可以帮助开发人员快速构建web服务。 下面简单介绍一下能提供web服务的listenAndServe函数，它在go源码中的net&#x2F;http&#x2F;server.go中定义 1234567891011&#x2F;&#x2F; Li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go并发编程实战笔记之http">
+<meta property="og:url" content="https://sunnydongbowen.github.io/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/index.html">
+<meta property="og:site_name" content="博文">
+<meta property="og:description" content="✏️ 阅读汪明的《Go并发编程实战第11章做的笔记  net&#x2F;http简介Go语言中对web服务器端的编程提供了很好的支持，标准库中的net&#x2F;http包提供了很多Web服务相关的API，可以帮助开发人员快速构建web服务。 下面简单介绍一下能提供web服务的listenAndServe函数，它在go源码中的net&#x2F;http&#x2F;server.go中定义 1234567891011&#x2F;&#x2F; Li">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-10T11:34:02.000Z">
+<meta property="article:modified_time" content="2022-10-10T11:53:40.508Z">
+<meta property="article:author" content="博文">
+<meta property="article:tag" content="Go Web">
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/xx.jpg"><link rel="canonical" href="https://sunnydongbowen.github.io/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"HLT03CFE0Y","apiKey":"f10d296a77a800e060c4ca219a883d6c","indexName":"hexo_bowen","hits":{"per_page":100},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Go并发编程实战笔记之http',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-10 19:53:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ee.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">博文</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Go并发编程实战笔记之http</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-10T11:34:02.000Z" title="发表于 2022-10-10 19:34:02">2022-10-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-10T11:53:40.508Z" title="更新于 2022-10-10 19:53:40">2022-10-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Go/">Go</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Go并发编程实战笔记之http"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>✏️ 阅读汪明的《Go并发编程实战第11章做的笔记</p>
+</blockquote>
+<h2 id="net-x2F-http简介"><a href="#net-x2F-http简介" class="headerlink" title="net&#x2F;http简介"></a>net&#x2F;http简介</h2><p>Go语言中对web服务器端的编程提供了很好的支持，标准库中的<code>net/http包</code>提供了很多Web服务相关的<code>API</code>，可以帮助开发人员快速构建web服务。</p>
+<p>下面简单介绍一下能提供web服务的<code>listenAndServe</code>函数，它在go源码中的<code>net/http/server.go</code>中定义</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ListenAndServe listens on the TCP network address addr and then calls</span></span><br><span class="line"><span class="comment">// Serve with handler to handle requests on incoming connections.</span></span><br><span class="line"><span class="comment">// Accepted connections are configured to enable TCP keep-alives.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// The handler is typically nil, in which case the DefaultServeMux is used.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// ListenAndServe always returns a non-nil error.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ListenAndServe</span><span class="params">(addr <span class="type">string</span>, handler Handler)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">	server := &amp;Server&#123;Addr: addr, Handler: handler&#125;</span><br><span class="line">	<span class="keyword">return</span> server.ListenAndServe()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该函数用于在特定的TCP网络地址addr(第一个参数)上进行监听，然后调用服务器端处理流程，handler(第二个参数)来处理传入的连接请求。handler通常为nil，这意味着调用默认的 DefaultServeMux 进行处理，默认的 DefaultServeMux 会自动注册用户定义的客户端逻辑处理程序。</p>
+<h2 id="server-go示例程序分析"><a href="#server-go示例程序分析" class="headerlink" title="server.go示例程序分析"></a>server.go示例程序分析</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">		<span class="keyword">if</span> r.Method == <span class="string">&quot;GET&quot;</span> &#123;</span><br><span class="line">			vars := r.URL.Query()</span><br><span class="line">			key, ok := vars[<span class="string">&quot;key&quot;</span>]</span><br><span class="line">			<span class="keyword">if</span> ok &#123;</span><br><span class="line">				msg := <span class="string">&quot;hello get &quot;</span> + key[<span class="number">0</span>]</span><br><span class="line">				w.Write([]<span class="type">byte</span>(msg))</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				w.Write([]<span class="type">byte</span>(<span class="string">&quot;hello world!&quot;</span>))</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> r.Method == <span class="string">&quot;POST&quot;</span> &#123;</span><br><span class="line">			r.ParseForm()</span><br><span class="line">			key := r.Form.Get(<span class="string">&quot;name&quot;</span>)</span><br><span class="line">			msg := <span class="string">&quot;hello post&quot;</span> + key</span><br><span class="line">			w.Write([]<span class="type">byte</span>(msg))</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">    <span class="comment">// 一定要写端口号，不然程序一下子就运行完了</span></span><br><span class="line">	http.ListenAndServe(<span class="string">&quot;127.0.0.1:8080&quot;</span>, <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析一下上面程序：</p>
+<h3 id="http-ListenAndServe-“127-0-0-1-8080”-nil"><a href="#http-ListenAndServe-“127-0-0-1-8080”-nil" class="headerlink" title="http.ListenAndServe(“127.0.0.1:8080”, nil)"></a>http.ListenAndServe(“127.0.0.1:8080”, nil)</h3><p>​       首先导入<code>net/http包</code>，这个包中有提供web服务的核心API,<code>http.ListenAndServe(&quot;127.0.0.1:8080&quot;, nil)</code> 语句在地址127.0.0.1:8080上监听请求，要注意端口号不要忘记写了，我第一次运行的时候没有写端口号，一下子运行完成，也没有报错。第二个参数为nil，意味着调用默认的 DefaultServeMux 进行处理。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HandleFunc registers the handler function for the given pattern</span></span><br><span class="line"><span class="comment">// in the DefaultServeMux.</span></span><br><span class="line"><span class="comment">// The documentation for ServeMux explains how patterns are matched.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HandleFunc</span><span class="params">(pattern <span class="type">string</span>, handler <span class="keyword">func</span>(ResponseWriter, *Request)</span></span>) &#123;</span><br><span class="line">	DefaultServeMux.HandleFunc(pattern, handler)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="http-HandleFunc-“-x2F-“-func-w-http-ResponseWriter-r-http-Request"><a href="#http-HandleFunc-“-x2F-“-func-w-http-ResponseWriter-r-http-Request" class="headerlink" title="http.HandleFunc(“&#x2F;“, func(w http.ResponseWriter, r *http.Request)"></a>http.HandleFunc(“&#x2F;“, func(w http.ResponseWriter, r *http.Request)</h3><p> 这个语句定义一个路由请求处理程序，<code>http.HandleFunc</code> 接收两个参数：</p>
+<p>第一个参数是HTTP请求的目标路径<code>“/”</code>,该参数可以是字符串，也可以是字符串形式的正则表达式。<code>“/”</code>表示处理<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/"><a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></a> 下的请求；</p>
+<p>第二个是具体的<code>回调方法</code>，响应客户端请求。<code>http.HandleFunc</code> 具有路由URL路由功能，可以根据路由定义来进行不同的逻辑处理，<code>http.Request</code>  代表客户端请求，可以获取很多信息，比如客户端请求的方法(GET或POST等)以及客户端请求的参数等。</p>
+<h3 id="r-URL-Query"><a href="#r-URL-Query" class="headerlink" title="r.URL.Query()"></a>r.URL.Query()</h3><p>​       如果是GET请求，可以通过<code>r.URL.Query()</code>  方法获取客户端Query参数，它是一个Values类型，本质上是一个<code>map[string][]string</code> ，因此可以用[‘参数名’]来获取具体的参数的值。例如我们正常url输入，匹配到了程序中的if语句，会get到key的值。如果获取的Query参数没有错误，则将返回一个[]string参数类型的值，获取值后拼接后返回一个字符串。</p>
+<p>​                                <img src="/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/1665402238496.png" alt="1665402238496"></p>
+<p>​        如果我们输入不存在的key，则会走到else语句里，例如</p>
+<p>​                                   <img src="/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/1665402263844.png" alt="1665402263844"></p>
+<ul>
+<li><code>http.Request</code></li>
+</ul>
+<p>​        是一个结构体，可以点开看一下里面的参数。其中Form存储了POST，GET，PUT参数，在使用之前需要调用ParseForm方法。PostForm存储了POST和PUT参数，使用之前也需要调用ParseForm方法。MultipartForm传的是表单post参数，在使用前需要调用ParseMultipartForm方法。</p>
+<ul>
+<li><code>http.ResponseWriter</code></li>
+</ul>
+<p>​       是一个接口，定义如下,更具体的可以点开源码看一下说明，说明写的极其详细:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ResponseWriter <span class="keyword">interface</span> &#123;</span><br><span class="line">	Header() Header</span><br><span class="line">	Write([]<span class="type">byte</span>) (<span class="type">int</span>, <span class="type">error</span>)</span><br><span class="line">	WriteHeader(statusCode <span class="type">int</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>w.Write([]byte(msg))</code> 语句返回数据到客户端，由于msg是string类型，因此需要强制类型转换。</p>
+<p>上面程序还是很经典的，要熟练掌握。</p>
+<h2 id="加载html"><a href="#加载html" class="headerlink" title="加载html"></a>加载html</h2><p>index.html内容：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Go<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;.Msg&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>&#123;&#123;.Msg&#125;&#125;</code>  是一个模板内容</p>
+<p>handle函数如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">handleIndex</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">	t, _ := template.ParseFiles(<span class="string">&quot;http/index.html&quot;</span>)</span><br><span class="line">	data := Data&#123;<span class="string">&quot;hello http&quot;</span>&#125;</span><br><span class="line">	t.Execute(w, data)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的程序中，首先导入html&#x2F;template包，支持html模板的解析，函数handleIndex负责读取和解析index.html文件并返回客户端。</p>
+<p><code>data := Data&#123;&quot;hello http&quot;&#125;</code> 实例化结构体data。t.Execute(w, data) 对读取的html模板进行解析， 并将字段Msg值替换到<code>&#123;&#123;.Msg&#125;&#125;</code>中</p>
+<p>注意<code>template.ParseFiles()</code>，可以解析多个文件，如果不同目录有相同的文件名，那么剩下的生效的只有最后一个。<code>template.ParseFiles(&quot;http/index.html&quot;，&quot;http1/index.html&quot;)</code>，虽然在实际编程中一般都是确定的，但也要警惕这个坑。</p>
+<p>这样就可以直接加载index.html的内容了，postman测试如下：</p>
+<p><img src="/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/1665401983637.png" alt="1665401983637"></p>
+<h2 id="总结写法"><a href="#总结写法" class="headerlink" title="总结写法"></a>总结写法</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">handleText</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">handleIndex</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>主函数</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="comment">// 调用方式</span></span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/&quot;</span>, handleText)</span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/index&quot;</span>, handleIndex)</span><br><span class="line">	<span class="comment">// 一定要写端口号，不然程序一下子就运行完了</span></span><br><span class="line">	err := http.ListenAndServe(<span class="string">&quot;127.0.0.1:8080&quot;</span>, <span class="literal">nil</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>本章节源代码见下：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/sunnydongbowen/go-web-exercises/tree/master/http">go-web-exercises&#x2F;http at master · sunnydongbowen&#x2F;go-web-exercises</a></p>
+<p>现在市面上的Go-Web框架就是基于net&#x2F;http包开发的，Beego，Gin等。后面随着课程深入继续研究吧，每个web框架的核心功能其实都一样的，甚至实现方式大同小异。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunnydongbowen.github.io">博文</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunnydongbowen.github.io/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/">https://sunnydongbowen.github.io/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunnydongbowen.github.io" target="_blank">博文</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Go-Web/">Go Web</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/if%E8%AF%AD%E5%8F%A5%E5%9F%BA%E7%A1%80/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">if语句基础</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/ee.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">博文</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#net-x2F-http%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">net&#x2F;http简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-go%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">server.go示例程序分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http-ListenAndServe-%E2%80%9C127-0-0-1-8080%E2%80%9D-nil"><span class="toc-number">2.1.</span> <span class="toc-text">http.ListenAndServe(“127.0.0.1:8080”, nil)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http-HandleFunc-%E2%80%9C-x2F-%E2%80%9C-func-w-http-ResponseWriter-r-http-Request"><span class="toc-number">2.2.</span> <span class="toc-text">http.HandleFunc(“&#x2F;“, func(w http.ResponseWriter, r *http.Request)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#r-URL-Query"><span class="toc-number">2.3.</span> <span class="toc-text">r.URL.Query()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BDhtml"><span class="toc-number">3.</span> <span class="toc-text">加载html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E5%86%99%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">总结写法</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/" title="Go并发编程实战笔记之http"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Go并发编程实战笔记之http"/></a><div class="content"><a class="title" href="/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0%E4%B9%8Bhttp/" title="Go并发编程实战笔记之http">Go并发编程实战笔记之http</a><time datetime="2022-10-10T11:34:02.000Z" title="发表于 2022-10-10 19:34:02">2022-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/if%E8%AF%AD%E5%8F%A5%E5%9F%BA%E7%A1%80/" title="if语句基础"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="if语句基础"/></a><div class="content"><a class="title" href="/if%E8%AF%AD%E5%8F%A5%E5%9F%BA%E7%A1%80/" title="if语句基础">if语句基础</a><time datetime="2022-10-09T06:53:32.000Z" title="发表于 2022-10-09 14:53:32">2022-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Split%E5%88%87%E5%89%B2%E6%96%87%E4%BB%B6%E5%90%8D/" title="Split切割文件名"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Split切割文件名"/></a><div class="content"><a class="title" href="/Split%E5%88%87%E5%89%B2%E6%96%87%E4%BB%B6%E5%90%8D/" title="Split切割文件名">Split切割文件名</a><time datetime="2022-10-09T06:48:43.000Z" title="发表于 2022-10-09 14:48:43">2022-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/" title="自定义类型和类型别名"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义类型和类型别名"/></a><div class="content"><a class="title" href="/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/" title="自定义类型和类型别名">自定义类型和类型别名</a><time datetime="2022-10-09T03:44:40.000Z" title="发表于 2022-10-09 11:44:40">2022-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8F%8A%E5%8F%98%E9%87%8F%E9%81%AE%E8%94%BD/" title="变量作用域及变量遮蔽"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="变量作用域及变量遮蔽"/></a><div class="content"><a class="title" href="/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8F%8A%E5%8F%98%E9%87%8F%E9%81%AE%E8%94%BD/" title="变量作用域及变量遮蔽">变量作用域及变量遮蔽</a><time datetime="2022-10-09T03:14:56.000Z" title="发表于 2022-10-09 11:14:56">2022-10-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 博文</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
