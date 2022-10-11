@@ -6,7 +6,7 @@
 <meta property="og:description" content="✏️ 记录了基于centos8.13 cobbler的安装，调试的过程，记得当时花了一周的时间才摸索出来，网上的资料基于centos7的居多，几乎没有基于centos8的，记录一下过程，如果不是大批量安装服务器的话，其实不需要使用cobbler，维护起来也挺麻烦。而且cobbler中有dhcp服务，会很大程度上影响到公司内网。  安装源码安装cobbler一开始以为centos8 并没有cobb">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-12T09:35:17.000Z">
-<meta property="article:modified_time" content="2022-10-11T10:04:58.577Z">
+<meta property="article:modified_time" content="2022-10-11T10:10:16.282Z">
 <meta property="article:author" content="博文">
 <meta property="article:tag" content="centos">
 <meta property="article:tag" content="系统安装">
@@ -52,7 +52,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-10-11 18:04:58'
+  postUpdate: '2022-10-11 18:10:16'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -141,7 +141,7 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ee.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">博文</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">cobbler批量安装系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-12T09:35:17.000Z" title="发表于 2021-09-12 17:35:17">2021-09-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-11T10:04:58.577Z" title="更新于 2022-10-11 18:04:58">2022-10-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="cobbler批量安装系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ee.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">博文</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">cobbler批量安装系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-12T09:35:17.000Z" title="发表于 2021-09-12 17:35:17">2021-09-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-11T10:10:16.282Z" title="更新于 2022-10-11 18:10:16">2022-10-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="cobbler批量安装系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
 <p>✏️ 记录了基于centos8.13 cobbler的安装，调试的过程，记得当时花了一周的时间才摸索出来，网上的资料基于centos7的居多，几乎没有基于centos8的，记录一下过程，如果不是大批量安装服务器的话，其实不需要使用cobbler，维护起来也挺麻烦。而且cobbler中有dhcp服务，会很大程度上影响到公司内网。</p>
 </blockquote>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="源码安装cobbler"><a href="#源码安装cobbler" class="headerlink" title="源码安装cobbler"></a>源码安装cobbler</h1><p>一开始以为<code>centos8 并没有cobblerd的yum源</code>，去<a target="_blank" rel="noopener" href="https://cobbler.github.io/downloads/3.x.x.html"><code>官网</code></a>手动下载源码。解压到服务器。</p>
@@ -242,27 +242,27 @@
 
 <p>其余的也要根据实际报错来把少的文件拷贝到&#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;目录下</p>
 <h1 id="修改cobbler-x2F-settings"><a href="#修改cobbler-x2F-settings" class="headerlink" title="修改cobbler&#x2F;settings"></a>修改cobbler&#x2F;settings</h1><p>主要改下面三块内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/cobbler/settings</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/cobbler/settings</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>1表示是自动获取，默认是0</li>
 </ul>
-<p><img src="/image/image.png" alt="https://cdn.nlark.com/yuque/0/2021/png/812311/1621561225990-a8779f46-0f9d-48ae-a8ea-8c4fbede2d2e.png"></p>
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665482807977.png" alt="1665482807977"></p>
 <ul>
 <li>改ip地址</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/^server: 127.0.0.1/server: 192.168.10.17/&#x27; /etc/cobbler/settings</span><br><span class="line">sed -i &#x27;s/^next_server: 127.0.0.1/next_server: 192.168.10.17/&#x27; /etc/cobbler/settings</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s/^server: 127.0.0.1/server: 192.168.10.17/&#x27;</span> /etc/cobbler/settings</span><br><span class="line">sed -i <span class="string">&#x27;s/^next_server: 127.0.0.1/next_server: 192.168.10.17/&#x27;</span> /etc/cobbler/settings</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>改密码，<code>参考5.5</code></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_password_crypted: &quot;$1$mF86/UHC$WvcIcX2t6crBz2onWxyac.&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_password_crypted: <span class="string">&quot;$1<span class="variable">$mF86</span>/UHC<span class="variable">$WvcIcX2t6crBz2onWxyac</span>.&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="修改dhcp-template文件"><a href="#修改dhcp-template文件" class="headerlink" title="修改dhcp.template文件"></a>修改dhcp.template文件</h1><p>这个文件装的时候会根据现场网络自动生成，可适当修改</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/cobbler/dhcp.template</span><br></pre></td></tr></table></figure>
 
 <p>我们根据实际需要修改</p>
-<p><img src="/image/image.png" alt="https://cdn.nlark.com/yuque/0/2021/png/812311/1621562166307-6abe9811-9e6c-4c39-a7fd-43c15e9b07ef.png"></p>
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665482844233.png" alt="1665482844233"></p>
 <p>修改完成后，重启cobbler，执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cobbler <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
 
@@ -270,17 +270,21 @@
 <p>可以看到，dhcp.conf文件由207变成了1493，dhcp同步了这个模板文件的配置。</p>
 <p>至此，安装部分基本结束了。</p>
 <h1 id="添加iso并挂载"><a href="#添加iso并挂载" class="headerlink" title="添加iso并挂载"></a>添加iso并挂载</h1><p>由于是在esxi里进行试验，在页面上添加。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665482887569.png" alt="1665482887569"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
 
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665482970686.png" alt="1665482970686"></p>
 <p>sr0就是我们的CD-ROM,挂载</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@cloud4 bin]# mount /dev/sr0 /mnt/</span><br><span class="line">mount: /mnt: WARNING: device write-protected, mounted read-only.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@cloud4 bin]<span class="comment"># mount /dev/sr0 /mnt/</span></span><br><span class="line">mount: /mnt: WARNING: device write-protected, mounted read-only.</span><br></pre></td></tr></table></figure>
 
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665483005013.png" alt="1665483005013"></p>
 <h1 id="导入光盘成为cobbler的yum源"><a href="#导入光盘成为cobbler的yum源" class="headerlink" title="导入光盘成为cobbler的yum源"></a>导入光盘成为cobbler的yum源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要更新签名，不然会报错，这一步会去外网</span></span><br><span class="line">cobbler signature update</span><br><span class="line">cobbler import --name=CentOS8 --path=/mnt/  --<span class="built_in">arch</span>=x86_64</span><br><span class="line"><span class="built_in">cd</span> /var/www/cobbler/distro_mirror/CentOS8-x86_64</span><br></pre></td></tr></table></figure>
 
 <p>并且浏览器输入:<a target="_blank" rel="noopener" href="http://192.168.10.16/cobbler/distro_mirror/CentOS8-x86_64/%EF%BC%8C%E7%9C%8B%E5%88%B0%E4%B8%8B%E5%9B%BE%EF%BC%8C%E8%AF%B4%E6%98%8E%E6%88%90%E5%8A%9F%E4%BA%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E4%B8%8B%E8%BD%BDrpm%E5%8C%85%E3%80%82">http://192.168.10.16/cobbler/distro_mirror/CentOS8-x86_64/，看到下图，说明成功了，可以正常下载rpm包。</a></p>
-<p><img src="/image/image.png" alt="https://cdn.nlark.com/yuque/0/2021/png/812311/1621578395185-fdde4574-212f-4e8f-abb2-ac9ffbfaed1f.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">离线signature方法</span><br><span class="line"> 在实际场景中，无法连外网的情况进行更新签名,首先要有本地源，将json放到nginx服务器上</span><br></pre></td></tr></table></figure>
-
+<p><img src="/cobbler%E6%89%B9%E9%87%8F%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/1665482916505.png" alt="1665482916505"></p>
+<blockquote>
+<p>离线signature方法<br> 在实际场景中，无法连外网的情况进行更新签名,首先要有本地源，将json放到nginx服务器上</p>
+</blockquote>
 <p>修改下面代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python3.6/site-packages/cobbler/settings.py</span><br><span class="line"><span class="string">&quot;signature_url&quot;</span>: [<span class="string">&quot;&lt;http://host2:808/signatures/3.0.x/latest.json&gt;&quot;</span>, <span class="string">&quot;str&quot;</span>]</span><br></pre></td></tr></table></figure>
 
