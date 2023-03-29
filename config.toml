@@ -317,7 +317,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     fontawesome = true
     # whether to show link to Raw Markdown content of the content
     # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
+    linkToMarkdown = false
     # whether to show the full text content in RSS
     # 是否在 RSS 中显示全文内容
     rssFullText = false
@@ -434,8 +434,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Valine 评论系统设置 (https://github.com/xCss/Valine)
       [params.page.comment.valine]
         enable = true
-        appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-        appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
+        appId = "GKvJon2RcHSvK1VO6Cwz87uH-gzGzoHsz"
+        appKey = "SDkgtxmYEAxTlx5tN3RXfl6R"
         placeholder = ""
         avatar = "mp"
         meta= ""
@@ -664,7 +664,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # Table Of Contents settings
   # 目录设置
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
     endLevel = 6
 
 # Sitemap config
