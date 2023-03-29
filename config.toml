@@ -876,9 +876,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         highlightTag = "em"
         absoluteURL = false
         [languages.zh-cn.params.search.algolia]
-          index = "index.zh-cn"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "hugo"
+          appID = "GUKNFS40XB"
+          searchKey = "0bcdb5bb5f8666fe7b71c586b43aa25b"
       [languages.zh-cn.params.home]
         rss = 10
         [languages.zh-cn.params.home.profile]
