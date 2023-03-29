@@ -783,7 +783,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         highlightTag = "em"
         absoluteURL = false
         [languages.en.params.search.algolia]
-          index = ""hugo
+          index = "hugo"
           appID = "GUKNFS40XB"
           searchKey = "0bcdb5bb5f8666fe7b71c586b43aa25b"
       [languages.en.params.home]
