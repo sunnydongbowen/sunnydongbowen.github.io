@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://sunnydongbowen.github.io"
 
 # theme
 # 主题
@@ -56,8 +56,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # Author config
 # 作者配置
 [author]
-  name = "xxxx"
-  email = ""
+  name = "博文"
+  email = "bowen815@126.com"
   link = ""
 
 # Menu config
@@ -136,7 +136,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       logo = ""
       # title name
       # 标题名称
-      name = "LoveIt"
+      name = "Bovan"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
@@ -266,7 +266,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "https://images.cnblogs.com/cnblogs_com/sunnybowen/2209498/t_220828034219_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220828114148eee.jpg"
+      avatarURL = "head.png"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
@@ -537,7 +537,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 出版者信息
       [params.page.seo.publisher]
         name = "xxxx"
-        logoUrl = "https://images.cnblogs.com/cnblogs_com/sunnybowen/2209498/t_220828034219_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220828114148eee.jpg"
+        logoUrl = "head.png"
 
   # TypeIt config
   # TypeIt 配置
@@ -884,14 +884,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.zh-cn.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar.png"
+          avatarURL = "head.png"
           title = ""
           subtitle = "一个简洁、优雅且高效的 Hugo 主题"
           typeit = true
           social = true
           disclaimer = ""
       [languages.zh-cn.params.social]
-        GitHub = "sunnydongbowoen"
+        GitHub = "sunnydongbowwen"
         #Weibo = "xxxx"
         #Steam = "xxxx"
         #Zhihu = "xxxx"
@@ -899,6 +899,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         #Devto = "xxxx"
         #Bilibili = "xxxx"
         Email = "bowen815@126.com"
-        Phone = "555-555-555"
-        RSS = true
+        #Phone = "555-555-555"
+        #RSS = true
 
