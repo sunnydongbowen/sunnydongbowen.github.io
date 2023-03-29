@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LoveIt</title>
+        <link>https://sunnydongbowen.github.io/</link>
+        <description>Hugo theme - LoveIt</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bowen815@126.com (博文)</managingEditor>
+            <webMaster>bowen815@126.com (博文)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 Aug 2022 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://sunnydongbowen.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>大明课笔记</title>
+    <link>https://sunnydongbowen.github.io/%E4%B8%8A%E8%AF%BE/</link>
+    <pubDate>Sun, 21 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>博文</author>
+    <guid>https://sunnydongbowen.github.io/%E4%B8%8A%E8%AF%BE/</guid>
+    <description><![CDATA[摘录1 大明的课，讲的很好。之前上课的时候没好好听！ B+树，多叉树，更小的高度，存储更多的数据。不是二叉树，也不是红黑树。 学会包装程数据性能优]]></description>
+</item>
+<item>
+    <title>我的第一篇博客</title>
+    <link>https://sunnydongbowen.github.io/test/</link>
+    <pubDate>Sun, 21 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>博文</author>
+    <guid>https://sunnydongbowen.github.io/test/</guid>
+    <description><![CDATA[这里是Markdown 正文]]></description>
+</item>
+</channel>
+</rss>
