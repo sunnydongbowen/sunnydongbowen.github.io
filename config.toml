@@ -1,3 +1,17 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+
+baseURL = "https://sunnydongbowen.github.io"
+
+# theme
+# 主题
+theme = "LoveIt"
+# themes directory
+# 主题目录
+#themesDir = "../.."
+
+# website title
+# 网站标题
+title = "LoveIt"
+# 是否使用 git 信息
+
+enableGitInfo = true
+defaultContentLanguage = "zh-cn"
