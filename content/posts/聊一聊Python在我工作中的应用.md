@@ -42,9 +42,9 @@ OcloudView 平台的全流程测试
 
 ------
 
-运维方面，我基于centos8.3.2011操作系统版本和kolla-ansible定制了openstack victoria版本的自动化部署脚本，这套脚本是我花费了很长时间一步步调试出来的。可以极大的提高部署openstack 效率，并且在现网部署的时候使用。
+运维方面，我基于centos8.3.2011操作系统版本和kolla-ansible定制了openstack victoria版本的自动化部署脚本，这套脚本是我花费了很长时间一步步调试出来的。可以极大的提高部署openstack 效率，并且在现网部署的时候使用。代码已经开源出来，希望能帮到有用的小伙伴。
 
-[online_deploy_victoria](https://github.com/sunnydongbowen/online_deploy_victoria)  代码已经开源出来，希望能帮到有用的小伙伴。
+[online_deploy_victoria](https://github.com/sunnydongbowen/online_deploy_victoria)  
 
 除此之外，在云桌面项目里，我也有使用python编写了十分简便的批量链接工具，比如批量建立spice链接，同时测试60到70台虚拟机；比如批量登录APP客户端；批量并发测试接口，根据日志判断开发的消息队列等等，这些就不详细介绍了，流程稍有复杂且是针对项目定制的。但是在当时，我就用了那台只有4G内存的笔记本，写出了这样的代码，极大的提高了测试的效率，并且如果没有这些代码，手工进行操作是不可能也是不现实的。
 
