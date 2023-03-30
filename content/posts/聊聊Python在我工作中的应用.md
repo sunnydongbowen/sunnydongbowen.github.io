@@ -1,9 +1,7 @@
 ---
 title: "聊聊Python在我工作中的应用"                         
-author: "博文"  
-description : "我的第一篇博客，介绍了hugo"    
-date: 2023-03-29        
-lastmod: 2022-08-21  
+author: "博文"   
+date: 2023-03-29          
 comments: true 
  
 tags : [                                    
