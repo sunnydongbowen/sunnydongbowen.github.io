@@ -266,7 +266,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "head.png"
+      avatarURL = "https://images.cnblogs.com/cnblogs_com/sunnybowen/2209498/t_220828034219_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220828114148eee.jpg"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
