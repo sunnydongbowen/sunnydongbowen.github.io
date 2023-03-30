@@ -7,7 +7,7 @@ tags : [
      "Go Web",
  ]
 categories : [                              
-     "GO语言",
+     "Go语言",
  ]
 date: 2023-03-30
 ---
@@ -128,3 +128,8 @@ func TestRestful(t *testing.T) {
 
 ![示例图片](/gin示例及restfulAPI/20230330203931.png)
 
+<img src="/gin示例及restfulAPI/20230330203931.png" width=150>
+
+# 补充
+
+学习Gin框架时，可以点开源码，看一下原理，是怎么对net/http包进行封装的。还是多写多练习。
