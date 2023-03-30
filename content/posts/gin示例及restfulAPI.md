@@ -130,4 +130,36 @@ func TestRestful(t *testing.T) {
 
 # 补充
 
-学习Gin框架时，可以点开源码，看一下原理，是怎么对net/http包进行封装的。还是多写多练习。
+学习Gin框架时，可以点开源码，看一下原理，是怎么对net/http包进行封装的。核心多写多练习。后面会结合其他第三方库进行一些简单的开发。
+
+另外补充第一个数据结构，这个是经常用的数据结构，要记得
+
+```go
+map[string]any
+```
+
+gin.H 是一个自定义类型
+
+```go
+// H is a shortcut for map[string]interface{}
+type H map[string]any
+```
+
+看一下它的使用方式，这个就是类似`map[string]any{"code": 1,"msg":  "查询数据失败",}`
+
+```go
+func TestH(t *testing.T) {
+	m := map[string]any{"message": "GET", "Code": 200}
+	fmt.Println(m)
+}
+```
+
+```Go
+c.JSON(200, gin.H{
+			"code": 1,
+			"msg":  "查询数据失败",
+		})
+		return
+```
+
+关于基础的东西后面边复习边整理，例如基础数据类型和slice，map，chan等复合数据类型。
