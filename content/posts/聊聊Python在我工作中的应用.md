@@ -1,5 +1,5 @@
 ---
-title: "聊一聊Python在我工作中的应用"                         
+title: "聊聊Python在我工作中的应用"                         
 author: "博文"  
 description : "我的第一篇博客，介绍了hugo"    
 date: 2023-03-29        
