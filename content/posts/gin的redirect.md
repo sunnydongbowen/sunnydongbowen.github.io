@@ -10,7 +10,7 @@ categories : [
 author: "博文"  
 ---
 
-> ✏️ 重定向主要分为两种，http重定向和路由重定向，这个在日常web开发中还是经常用到的，要掌握。
+> ✏️ 重定向主要分为两种，http重定向和路由重定向，在日常web开发中经常用到的，要掌握。
 
 # HTTP重定向
 
@@ -18,12 +18,12 @@ author: "博文"
 r := gin.Default()
 r.GET("/hello", func(c *gin.Context) {
 c.JSON(200, gin.H{
-"message": "hello gin",
+	"message": "hello gin",
    })
 })
 
 r.GET("/abc", func(c *gin.Context) {
-c.Redirect(http.StatusMovedPermanently, "http://www.baidu.com")
+	c.Redirect(http.StatusMovedPermanently, "http://www.baidu.com")
    })
 r.Run()
 ```
