@@ -1,5 +1,5 @@
 ---
-title: "gin示例及restfulAPI"                         
+title: "gin~示例及restfulAPI"                         
 author: "博文"      
 comments: true 
  

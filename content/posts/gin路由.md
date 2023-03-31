@@ -1,5 +1,5 @@
 ---
-title: "gin路由"
+title: "gin~路由"
 date: 2023-03-30
 tags : [                                    
      "Go Web",
@@ -73,33 +73,33 @@ r.NoRoute(func(c *gin.Context) {
 
 ```go
 r := gin.Default()
-	userGroup := r.Group("/user")
-	// 不用{}也可
-	{
-		userGroup.GET("/index", func(c *gin.Context) {
-			c.JSON(200, gin.H{
-				"message": "这里user的index页面",
-			})
-		})
-		userGroup.GET("/login", func(c *gin.Context) {
-			c.JSON(200, gin.H{
-				"message": "这里是user的login页面",
-			})
-		})
-	}
+userGroup := r.Group("/user")
+// 不用{}也可
+{
+    userGroup.GET("/index", func(c *gin.Context) {
+        c.JSON(200, gin.H{
+            "message": "这里user的index页面",
+        })
+    })
+    userGroup.GET("/login", func(c *gin.Context) {
+        c.JSON(200, gin.H{
+            "message": "这里是user的login页面",
+        })
+    })
+}
 
-	shopGroup := r.Group("/shop")
-	shopGroup.GET("/index", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"mesage": "这是shop的index页面",
-		})
-	})
-	shopGroup.GET("/cart", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "这是shop的cart页面",
-		})
-	})
-	r.Run()
+shopGroup := r.Group("/shop")
+shopGroup.GET("/index", func(c *gin.Context) {
+    c.JSON(200, gin.H{
+        "mesage": "这是shop的index页面",
+    })
+})
+shopGroup.GET("/cart", func(c *gin.Context) {
+    c.JSON(200, gin.H{
+        "message": "这是shop的cart页面",
+    })
+})
+r.Run()
 ```
 
 运行，请求`http://127.0.0.1:8080/user/index`, 会返回
