@@ -1,7 +1,6 @@
 ---
 title: "gin路由"
 date: 2023-03-30
-lastmod: 2023-03-29
 tags : [                                    
      "Go Web",
  ]
@@ -26,7 +25,7 @@ r.POST("/login", func(c *gin.Context) {...})
 
 # Any
 
-有一个比较特殊的路由，Any，只要输入匹配的路径，不管是什么方法,`GET`  , `POST` ，`PUT` ，` DELETE` 等，都会走到这个逻辑里，例如
+是比较特殊的路由，Any，只要输入匹配的路径，不管是什么方法,`GET`  , `POST` ，`PUT` ，` DELETE` 等，都会走到这个逻辑里，例如
 
 ```go
 r.Any("/AnyMethod", func(c *gin.Context) {
