@@ -14,7 +14,7 @@ date: 2023-03-30
 
 > ✏️ 观看[李文周博客](https://www.liwenzhou.com/posts/Go/gin/#autoid-0-0-0)及七米视频作的笔记，这是看的我自己notion笔记又把代码敲了一遍。
 
-# Gin框架简介
+## Gin框架简介
 
 Go世界里最流行的Web框架，[Github](https://github.com/gin-gonic/gin)上有`32K+`star。 基于[httprouter](https://github.com/julienschmidt/httprouter)开发的Web框架。 [中文文档](https://gin-gonic.com/zh-cn/docs/) 齐全，简单易用的轻量级框架。类似py里的`flask`、`FastAPI`，不完善,。不像那种大而全的框架(`Beego`,`Django`，`Spring`)，大而全的框架用起来方便，不用选。框架越完善，受限制越多，不灵活。Beego有点类似全家桶的框架。
 
@@ -30,7 +30,7 @@ gin目前是我正儿八经学过的第一个web框架，确实很好用！不�
 go get -u github.com/gin-gonic/gin
 ```
 
-# 第一个demo
+## 第一个demo
 
 ```go
 func TestGindemo1(t *testing.T) {
@@ -52,15 +52,15 @@ func TestGindemo1(t *testing.T) {
 
 ```go
 r := gin.Default()
-	r.GET("/hello", func(c *gin.Context) {
-		c.String(200, "hello, gin")
-	})
-	r.Run()
+r.GET("/hello", func(c *gin.Context) {
+    c.String(200, "hello, gin")
+})
+r.Run()
 ```
 
 注意不管返回字符串还是Json数据，状态码和func函数是要的。
 
-# RESTful API
+## RESTful API
 
 REST与技术无关，代表的是一种软件架构风格，REST是Representational State Transfer的简称，中文翻译为“表征状态转移”或“表现层状态转化”。推荐阅读[阮一峰 理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)
 
@@ -128,7 +128,7 @@ func TestRestful(t *testing.T) {
 
 ![示例图片](/gin示例及restfulAPI/20230330203931.png)
 
-# 补充
+## 补充
 
 学习Gin框架时，可以点开源码，看一下原理，是怎么对net/http包进行封装的。核心多写多练习。后面会结合其他第三方库进行一些简单的开发。
 
@@ -156,10 +156,10 @@ func TestH(t *testing.T) {
 
 ```Go
 c.JSON(200, gin.H{
-			"code": 1,
-			"msg":  "查询数据失败",
-		})
-		return
+    "code": 1,
+    "msg":  "查询数据失败",
+})
+return
 ```
 
 关于基础的东西后面边复习边整理，例如基础数据类型和slice，map，chan等复合数据类型。
