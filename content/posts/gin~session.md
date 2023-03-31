@@ -41,6 +41,10 @@ func main() {
 
 # 分析
 
+上面程序中，当客户端请求时，服务端返回了一个带session id 的cookie【具体的可以参考图解http这本书】给客户端，客户端再次请求时，会把cookie带上。
+
+secret是hash密钥，对hello->world映射加密，mysession作为session名称，不知道可以点进去，看一下程序是怎么走的。下面分析一下
+
 首先，当我们第一次请求，确保是纯第一次(就是没有cookie)，打印的肯定是nil，不等于world，会执行第一个分支，`session.Set("hello", "world")`  如下结果：
 
 ![image-20230331201128453](/gin路由/20230331201128453.png)
