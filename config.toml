@@ -827,15 +827,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         identifier = "posts"
         pre = ""
         post = ""
-        name = "所有文章"
-        url = "/posts/"
+        name = "🏠主页"
+        url = "/"
         title = ""
       [[languages.zh-cn.menu.main]]
         weight = 2
         identifier = "tags"
         pre = ""
         post = ""
-        name = "标签"
+        name = "🔖标签"
         url = "/tags/"
         title = ""
       [[languages.zh-cn.menu.main]]
