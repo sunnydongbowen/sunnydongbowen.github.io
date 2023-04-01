@@ -3,6 +3,7 @@ title: "聊聊Python在我工作中的应用"
 author: "博文"   
 date: 2023-03-29          
 comments: true 
+weight: 99
  
 tags : [                                    
      "python基础",
