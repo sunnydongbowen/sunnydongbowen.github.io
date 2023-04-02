@@ -213,3 +213,8 @@ func main() {
 }
 ```
 
+可以看到，基本使用步骤
+
+- 定义handle函数
+- http.HandleFunc()
+- 启动服务端
