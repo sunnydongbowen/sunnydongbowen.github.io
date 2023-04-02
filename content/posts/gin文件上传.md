@@ -48,7 +48,7 @@ func TestUpload(t *testing.T) {
 这个demo是我去年学习Go的时候，参考李文周的视频和博客写的，注意点
 
 - html里面`<input type="file" name="fl">` , 是fl，不是f1，不要弄混了。
-- 不要加`multiple`,这是单文件上
+- 不要加`multiple`,这是单文件上传
 - postman无法测试，这个要通过浏览器测试
 
 ![](/文件上传/20230401102220.png)
