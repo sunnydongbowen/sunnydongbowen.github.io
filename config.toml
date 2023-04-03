@@ -840,11 +840,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         title = ""
       [[languages.zh-cn.menu.main]]
         weight = 3
-        identifier = "categories"
+        #identifier = "categories"
         pre = ""
         post = ""
-        name = "分类"
-        url = "/categories/"
+        name = "📂Go语言"
+        url = "/Go语言学习之路"
         title = ""
       [[languages.zh-cn.menu.main]]
         weight = 4
