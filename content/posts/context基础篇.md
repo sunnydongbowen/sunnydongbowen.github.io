@@ -356,15 +356,13 @@ LOOP:
 
 来简单分析一下这个程序:
 
-- 第一种情况，如果超时时间设置成了50ms，数据库连接需要10ms，运行程序，可以看到，一直打印db connecting，说明这个goroutine一直执行，直到到了超时时间50ms，打印worker done，程序退出。这个是`context.WithTimeout函数自己到了超时时间发出的退出通知`，而不是main过了5s后手动调用的！这里要注意。也就是说，这个子goroutine，是到了超时时间就退出了。
-- 第二种情况，如果超时数据库连接时间需要100ms，超时时间设置成50ms，那么同样的，到了超时时间，依然会退出。这个也是`context.WithTimeout`发出的，而不是后面过了5s后我主动调用的cancel()。
-
-
+- 第一种情况，业务操作在设置的超时时间前完成了，这时`context.WithTimeout函数自己到了超时时间发出的退出通知` ，业务操作就结束了。这个不是手动调用cancel产生的。
+- 第二种情况，业务操作超时了，就是在设置的时间外才完成，那么这个也是`context.WithTimeout函数自己到了超时时间发出的退出通知`  不是我主动调用的cancel()。
 
 {{< admonition type=note title="注意点"  >}}
 
 - cancel有个坑，如果超时完成前，就执行完成业务操作的话，还得手动调用cancel，否则就要等到超时时间才会释放资源。在实际编码中，如果明确知道成功了，可以提前手动调用，而不必等到超时时间到了。
-- 一般都是在with后面，下一句直接写defer cancel()保证任何情况都可以取消。{{< /admonition >}}
+- 一般都是在`context.WithTimeout`后面，下一句直接写defer cancel()保证任何情况都可以取消。{{< /admonition >}}
 
 ### WithValue()
 
