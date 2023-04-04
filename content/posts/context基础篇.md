@@ -190,7 +190,7 @@ func TestContext1(t *testing.T) {
 
 {{< admonition type=failure title="报错"  >}}
 
-上面例子中，我遇到了一个报错，`panic: sync: negative WaitGroup counter`  比对我之前的代码，一样的。在最外面的函数中少了`wg.add(1)`, 加上后解决报错。这里要学会wg.add() ,wg.wait(),wg.done()这三个的位置！{{< /admonition >}}
+上面例子中，我遇到了一个报错，`panic: sync: negative WaitGroup counter`  比对我之前的代码，一样的。在最外面的函数中少了`wg.add(1)`, 加上后解决报错。这里要学会wg.add() ,wg.wait(),wg.done()这三个的位置！{{< /admonition >}}
 
 {{< admonition type=info title="更形象的例子"  >}}
 
@@ -311,7 +311,71 @@ func TestDeadline(t *testing.T) {
 
 在上面的示例代码中，因为ctx 1s后就会过期，所以`ctx.Done()`会先接收到context到期通知，并且会打印ctx.Err()的内容。
 
-{{< admonition type=note title="简单理解"  >}}deadline相当于给了一个时间限制，{{< /admonition >}}
+{{< admonition type=note title="简单理解"  >}}deadline相当于给了一个时间限制，如果时间到了，即便没接到通知，也会退出{{< /admonition >}}
 
 ![](/并发编程/20230403172207.png)
 
+### WithTimeout()
+
+WithTimeout的函数签名如下：
+
+```go
+func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
+```
+
+`WithTimeout`返回`WithDeadline(parent, time.Now().Add(timeout))`。
+
+取消此上下文将释放与其相关的资源，因此代码应该在此上下文中运行的操作完成后立即调用cancel，通常用于数据库或者网络连接的超时控制。具体示例如下：
+
+```go
+func TestWithout(t *testing.T) {
+	ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*50)
+	wg.Add(1)
+	go worker(ctx)
+	time.Sleep(time.Second * 5)
+	cancel()
+	wg.Wait()
+	fmt.Println("over")
+}
+
+func worker(ctx context.Context) {
+LOOP:
+	for {
+		fmt.Println("db connecting...")
+		time.Sleep(time.Millisecond * 10)
+		select {
+		case <-ctx.Done():
+			break LOOP
+		default:
+		}
+	}
+	fmt.Println("worker done")
+	wg.Done()
+}
+```
+
+来简单分析一下这个程序:
+
+- 第一种情况，如果超时时间设置成了50ms，数据库连接需要10ms，运行程序，可以看到，一直打印db connecting，说明这个goroutine一直执行，直到到了超时时间50ms，打印worker done，程序退出。这个是`context.WithTimeout函数自己到了超时时间发出的退出通知`，而不是main过了5s后手动调用的！这里要注意。也就是说，这个子goroutine，是到了超时时间就退出了。
+- 第二种情况，如果超时数据库连接时间需要100ms，超时时间设置成50ms，那么同样的，到了超时时间，依然会退出。这个也是`context.WithTimeout`发出的，而不是后面过了5s后我主动调用的cancel()。
+
+
+
+{{< admonition type=note title="注意点"  >}}
+
+- cancel有个坑，如果超时完成前，就执行完成业务操作的话，还得手动调用cancel，否则就要等到超时时间才会释放资源。在实际编码中，如果明确知道成功了，可以提前手动调用，而不必等到超时时间到了。
+- 一般都是在with后面，下一句直接写defer cancel()保证任何情况都可以取消。{{< /admonition >}}
+
+### WithValue()
+
+WithValue函数能够将请求作用域的数据与 Context 对象建立关系。声明如下：
+
+```go
+func WithValue(parent Context, key, val interface{}) Context
+```
+
+`WithValue`返回父节点的副本，其中与key关联的值为val。
+
+仅对API和进程间传递请求域的数据使用上下文值，而不是使用它来传递可选参数给函数。
+
+所提供的键必须是可比较的，并且不应该是`string`类型或任何其他内置类型，以避免使用上下文在包之间发生冲突。`WithValue`的用户应该为键定义自己的类型。为了避免在分配给interface{}时进行分配，上下文键通常具有具体类型`struct{}`。或者，导出的上下文关键变量的静态类型应该是指针或接口。
