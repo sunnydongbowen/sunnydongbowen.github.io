@@ -331,7 +331,7 @@ func Mybusiness() {
 
 {{< /admonition >}}
 
-![](/并发编程/20230404212940.png)           ![](/并发编程/20230404213204.png) 
+![](/并发编程/20230404212940.png)           ![](/并发编程/20230404213204.png) 
 
 {{< admonition type=danger title="注意"  >}}
 
@@ -346,4 +346,33 @@ cancel的位置，这里不要去defer  cancel，如果最后才cancel，可能�
 > - 没有过期时间，但是又需要在必要的时候取消，使用WithCancel
 > - 在固定时间点过期，使用WithDeadline
 > - 在一段时间后过期，使用WithTimeout
+
+# 补充1~子ctx修改超时时间
+
+{{< admonition type=note title="补充示例"  >}}
+
+在Context基础篇里写了几个作为参考和帮助理解，就不详细介绍。这里要说明的是子context试图重新设置超时时间，然而并没有成功，它依旧受到了父亲的控制。可以看一下下面例子：
+
+{{< /admonition >}}
+
+```go
+func TestTimeOut(t *testing.T) {
+	bg := context.Background()
+	timeoutCtx, cancel_parent := context.WithTimeout(bg, time.Second)
+	subCtx, cancel_child := context.WithTimeout(timeoutCtx, 10*time.Second)
+	go func() {
+		fmt.Println(<-subCtx.Done())
+		fmt.Println("timeout")
+	}()
+	time.Sleep(8 * time.Second)
+	//手动调用cancel
+	cancel_child()
+	errsub := subCtx.Err()
+	fmt.Println(errsub)
+	cancel_parent()
+```
+
+![](/并发编程/20230406172247.png) 
+
+
 
