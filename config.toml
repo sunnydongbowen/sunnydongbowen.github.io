@@ -888,7 +888,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.zh-cn.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "head.png"
+          avatarURL = "https://images.cnblogs.com/cnblogs_com/sunnybowen/2209498/t_220828034219_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220828114148eee.jpg"
           title = ""
           subtitle = "不怨不悔，坚守初心"
           typeit = true
