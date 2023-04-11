@@ -21,6 +21,8 @@ categories : [
 
 ## 💡Go Web
 
+{{< admonition type=tip title="Go Web"  >}}
+
 [http](https://sunnydongbowen.github.io/http/) （`重要指数🌟🌟🌟 `  `难度指数🌟🌟🌟 ` `汪明Go并发编程实战笔记`）
 
 [https](https://sunnydongbowen.github.io/https/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟🌟 ` `汪明Go并发编程实战笔记`）
@@ -37,3 +39,4 @@ categories : [
 
 [gin~文件上传](https://sunnydongbowen.github.io/gin%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/) （`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
 
+{{< /admonition >}}
