@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "并发编程基础篇.md",
+                "file": "go语言/go web/http.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "并发编程基础篇.md",
+                "file": "go语言/go web/http.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "并发编程基础篇.md",
+                "file": "go语言/go web/http.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "并发编程基础篇.md"
+                "file": "go语言/go web/http.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,13 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "945a984bd04beb43",
+  "active": "167cc7e2fbf84285",
   "lastOpenFiles": [
-    "go语言/gin~session.md",
+    "go语言/go web/gin~session.md",
+    "并发编程进阶篇.md",
+    "go语言/go web",
+    "并发编程基础篇.md",
     "python",
-    "gin的middleware.md",
+    "go语言/go web/gin的middleware.md",
     "读书笔记/读书笔记~自卑与超越.md",
-    "gin文件上传.md",
+    "go语言/go web/gin文件上传.md",
     "读书笔记",
     "读书笔记/读书笔记~生命重于泰山.md",
     "channel进阶.md"
