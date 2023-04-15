@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/go web/http.md",
+                "file": "go语言/channel进阶篇.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/go web/http.md",
+                "file": "go语言/channel进阶篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/go web/http.md",
+                "file": "go语言/channel进阶篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/go web/http.md"
+                "file": "go语言/channel进阶篇.md"
               }
             }
           }
@@ -146,18 +146,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "167cc7e2fbf84285",
+  "active": "945a984bd04beb43",
   "lastOpenFiles": [
+    "并发编程/20230407211300.png.md",
+    "go语言/channel进阶篇.md",
+    "并发编程",
+    "go语言/Go语言学习之路.md",
+    "image/20230402115502.png",
+    "image/20230330175350775.png",
+    "image/image-20230415101110844.png",
+    "image/image-20230402185252342.png",
+    "image/image-20230331201605577.png",
+    "image/image-20230331201128453.png",
+    "2023-04-15.md",
+    "go语言/并发编程基础篇.md",
+    "并发编程/20230406183622.png.md",
+    "go语言/go web/http.md",
     "go语言/go web/gin~session.md",
-    "并发编程进阶篇.md",
+    "go语言/并发编程进阶篇.md",
     "go语言/go web",
-    "并发编程基础篇.md",
     "python",
     "go语言/go web/gin的middleware.md",
     "读书笔记/读书笔记~自卑与超越.md",
     "go语言/go web/gin文件上传.md",
     "读书笔记",
-    "读书笔记/读书笔记~生命重于泰山.md",
-    "channel进阶.md"
+    "读书笔记/读书笔记~生命重于泰山.md"
   ]
 }
