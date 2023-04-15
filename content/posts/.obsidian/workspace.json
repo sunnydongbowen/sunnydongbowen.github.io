@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go/gin~session.md",
+                "file": "并发编程基础篇.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go/gin~session.md",
+                "file": "并发编程基础篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go/gin~session.md",
+                "file": "并发编程基础篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go/gin~session.md"
+                "file": "并发编程基础篇.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "945a984bd04beb43",
   "lastOpenFiles": [
+    "go语言/gin~session.md",
+    "python",
     "gin的middleware.md",
     "读书笔记/读书笔记~自卑与超越.md",
     "gin文件上传.md",
