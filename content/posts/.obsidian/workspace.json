@@ -11,8 +11,12 @@
             "id": "167cc7e2fbf84285",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "读书笔记/读书笔记~俞敏洪演讲.md"
+              }
             }
           }
         ],
@@ -138,10 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "945a984bd04beb43",
+  "active": "167cc7e2fbf84285",
   "lastOpenFiles": [
-    "读书笔记/读书笔记~俞敏洪演讲.md",
     "读书笔记/image-20230415101110844.png.md",
+    "读书笔记/读书笔记~俞敏洪演讲.md",
     "go语言/Go语言学习之路.md",
     "go语言/context进阶篇.md",
     "读书笔记/读书笔记~思考的整理学.md",
