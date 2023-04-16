@@ -11,12 +11,8 @@
             "id": "167cc7e2fbf84285",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/Go语言学习之路.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "go语言/Go语言学习之路.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -148,6 +140,9 @@
   },
   "active": "945a984bd04beb43",
   "lastOpenFiles": [
+    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "读书笔记/image-20230415101110844.png.md",
+    "go语言/Go语言学习之路.md",
     "go语言/context进阶篇.md",
     "读书笔记/读书笔记~思考的整理学.md",
     "读书笔记/读书笔记~聊聊读书.md",
@@ -158,8 +153,6 @@
     "读书笔记/20230416102012.png.md",
     "读书笔记/读书笔记~被讨厌的勇气.md",
     "读书笔记/读书笔记~岁月，在记忆里重逢.md",
-    "读书笔记/image-20230415101110844.png.md",
-    "go语言/Go语言学习之路.md",
     "go语言/并发编程进阶篇.md",
     "go语言/并发编程基础篇.md",
     "go语言/channel进阶篇.md",
