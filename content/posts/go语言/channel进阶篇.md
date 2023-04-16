@@ -191,9 +191,7 @@ ch <- 13 // panic: send on closed channel
 {{< /admonition >}}
 
 # select
-当涉及同时对多个 channel 进行操作时，我们会结合 Go 为 CSP 并发模型提供的另外一个原语 select，一起使用。
-
-通过 select，我们可以同时在多个 channel 上进行发送 / 接收操作：
+当涉及同时对多个 channel 进行操作时，我们会结合 Go 为 CSP 并发模型提供的另外一个原语 select，一起使用。通过 select，我们可以同时在多个 channel 上进行发送 / 接收操作：
 ```go
 select {
 case x := <-ch1:     // 从channel ch1接收数据
@@ -214,190 +212,251 @@ default:             // 当上面case中的channel通信均无法实施时，执
 看到这里你应该能感受到，channel 和 select 两种原语的操作都十分简单，它们都遵循了 Go 语言“追求简单”的设计哲学，但它们却为 Go 并发程序带来了**强大的表达能力**。学习了这些基础用法后，接下来我们再深一层，看看 Go 并发原语 channel 的一些惯用法。同样地，这里我们也分成**无缓冲 channel 、带缓冲 channel** 两种情况来分析。
 
 
-# 3. channel
+# 无缓冲 channel 的惯用法
 
-{{< admonition type=note title="chan的声明"  >}}
+## 用作信号传递
 
+无缓冲 channel 兼具通信和同步特性，在并发程序中应用颇为广泛。现在我们来看看几个无缓冲 channel 的典型应用：
+{{< admonition type=note title="用作信号传递"  >}}
 ```go
-var 变量名称 chan 元素类型
+type signal struct {  
+}  
+  
+func worker() {  
+   println("worker is working")  
+   time.Sleep(1 * time.Second)  
+}  
+  
+func spawn(f func()) <-chan signal {  
+   c := make(chan signal)  
+   go func() {  
+      println("worker start to work...")  
+      f()  
+      c <- signal{}  
+   }()  
+   return c  
+}  
+  
+func TestSignal(t *testing.T) {  
+   println("main start a worker.....")  
+   c := spawn(worker)  
+   <-c  
+   fmt.Println("worker work done!")  
+  
+}
+```
+在这个例子中，spawn 函数返回的 channel，被用于承载新 Goroutine 退出的“通知信号”，这个信号专门用作通知 main goroutine。main goroutine 在调用 spawn 函数后一直阻塞在对这个“通知信号”的接收动作上。
+
+我们来运行一下这个例子：
+```
+main start a worker.....
+worker start to work...
+worker is working
+worker work done!
+```
+{{< /admonition >}}
+
+{{< admonition type=note title="1对n信号通知"  >}}
+有些时候，无缓冲 channel 还被用来实现 1 对 n 的信号通知机制。这样的信号通知机制，常被用于协调多个 Goroutine 一起工作，比如下面的例子：
+```go
+func worker1(i int) {  
+   fmt.Printf("worker %d: is working...\n", i)  
+   time.Sleep(1 * time.Second)  
+   fmt.Printf("worker %d: works done\n", i)  
+}  
+  
+func spawnGroup(f func(i int), num int, grouSignal <-chan signal) <-chan signal {  
+  
+   c := make(chan signal)  
+   // Num个goroutine  
+   for i := 0; i < num; i++ {  
+      wg.Add(1)  
+      go func(i int) {  
+         <-grouSignal //阻塞点  
+         fmt.Printf("worker %d: start to work...\n", i)  
+         f(i)  
+         wg.Done()  
+      }(i + 1)  
+   }  
+  
+   go func() {  
+      wg.Wait()  
+      c <- signal{}  
+   }()  
+   return c  
+}  
+  
+func TestSignal2(t *testing.T) {  
+   fmt.Println("start a group of workers...")  
+   groupSignal := make(chan signal)  
+   c := spawnGroup(worker1, 5, groupSignal)  
+   time.Sleep(5 * time.Second)  
+   fmt.Println("the group of workers start to work...")  
+   close(groupSignal) // 关闭了  
+   <-c  
+   fmt.Println("the group of workers work done!")  
+}
+```
+这个例子中，main goroutine 创建了一组 5 个 worker goroutine，这些 Goroutine 启动后会阻塞在名为 groupSignal 的无缓冲 channel 上。main goroutine 通过close(groupSignal)向所有 worker goroutine 广播“开始工作”的信号，收到 groupSignal 后，所有 worker goroutine 会“同时”开始工作，就像起跑线上的运动员听到了裁判员发出的起跑信号枪声。
+这个例子的运行结果如下：
+```
+start a group of workers...
+the group of workers start to work...
+worker 1: start to work...
+worker 3: start to work...
+worker 1: is working...
+worker 2: start to work...
+worker 2: is working...
+worker 5: start to work...
+worker 5: is working...
+worker 3: is working...
+worker 4: start to work...
+worker 4: is working...
+worker 4: works done
+worker 5: works done
+worker 3: works done
+worker 2: works done
+worker 1: works done
+the group of workers work done!
+--- PASS: TestSignal2 (6.02s)
+```
+>我们可以看到，关闭一个无缓冲 channel 会让所有阻塞在这个 channel 上的接收操作返回，从而实现了一种 1 对 n 的“广播”机制。
+
+{{< /admonition >}}
+
+## 用于替代锁机制
+
+{{< admonition type=note title="基于“共享内存”+“互斥锁”的 Goroutine 安全的计数器的实现"  >}}
+```go
+type counter struct {  
+   sync.Mutex  
+   i int  
+}  
+  
+var cter counter  
+  
+// 加锁解锁，i+1  
+func Increase() int {  
+   cter.Lock()  
+   defer cter.Unlock()  
+   cter.i++  
+   return cter.i  
+}  
+  
+func TestNoBuffer(t *testing.T) {  
+   for i := 0; i < 10; i++ {  
+      wg.Add(1)  
+      go func(i int) {  
+         v := Increase()  
+         fmt.Printf("goroutine-%d: current counter value is %d\n", i, v)  
+         wg.Done()  
+      }(i)  
+   }  
+   wg.Wait()  
+}
+
 ```
 
-其中：
-
-- chan：是关键字
-- 元素类型：是指通道中传递元素的类型
-
-例如：
-
-```go
-var ch1 chan int   // 声明一个传递整型的通道
-var ch2 chan bool  // 声明一个传递布尔型的通道
-var ch3 chan []int // 声明一个传递int切片的通道
+运行结果
+```
+=== RUN   TestNoBuffer
+goroutine-9: current counter value is 1
+goroutine-0: current counter value is 2
+goroutine-1: current counter value is 3
+goroutine-2: current counter value is 4
+goroutine-3: current counter value is 5
+goroutine-4: current counter value is 6
+goroutine-5: current counter value is 7
+goroutine-6: current counter value is 8
+goroutine-7: current counter value is 9
+goroutine-8: current counter value is 10
+--- PASS: TestNoBuffer (0.00s)
+PASS
 ```
 
 {{< /admonition >}}
 
-## 3.6 多返回值模式
-
-当向通道中发送完数据时，我们可以通过`close`函数来关闭通道。当一个通道被关闭后，再往该通道发送值会引发`panic`，从该通道取值的操作会先取完通道中的值。通道内的值被接收完后再对通道执行接收操作得到的值会一直都是对应元素类型的零值。那我们如何判断一个通道是否被关闭了呢？
-
-对一个通道执行接收操作时支持使用如下多返回值模式。
-
+{{< admonition type=tip title="扩展"  >}}
+把程序修改一下
 ```go
-value, ok := <- ch
+ go func() {
+            v := Increase()
+            fmt.Printf("goroutine-%d: current counter value is %d\n", i, v)
+            wg.Done()
+        }()
 ```
-
-其中：
-
-- value：从通道中取出的值，如果通道被关闭则返回对应类型的零值。
-- ok：通道ch关闭时返回 false，否则返回 true。
-
-{{< admonition type=failure title="订正"  >}}
-
-上面说法错误，查了源码解释，是不仅要关闭，且为空才是false
-
+输出结果
 ```
-//	x, ok := <-c
-//
-// will also set ok to false for a closed and empty channel.
-func close(c chan<- Type)
+goroutine-2: current counter value is 1
+goroutine-9: current counter value is 3
+goroutine-9: current counter value is 4
+goroutine-9: current counter value is 5
+goroutine-9: current counter value is 6
+goroutine-9: current counter value is 7
+goroutine-9: current counter value is 8
+goroutine-10: current counter value is 9
+goroutine-5: current counter value is 2
+goroutine-10: current counter value is 10
 ```
-
-我测试了一下，确实是这样，两个条件同时满足才是false。
-
-```go
-ch := make(chan int, 2)
-ch <- 1
-x, ok := <-ch
-close(ch)
-fmt.Println(x, ok) // true
-ch <- 10 // panic
-```
+> 得到上面结果，是不是和在[并发编程基础篇](https://sunnydongbowen.github.io/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87/#22-goroutine%E4%B8%8E%E9%97%AD%E5%8C%85)很类似，思考一下，为什么？
 
 {{< /admonition >}}
 
-下面代码片段中的`f`函数会循环从通道`ch`中接收所有值，直到通道被关闭后退出。
-
+{{< admonition type=note title="无缓冲 channel 替代锁"  >}}
+在上面示例中，我们使用了一个带有互斥锁保护的全局变量作为计数器，所有要操作计数器的 Goroutine 共享这个全局变量，并在互斥锁的同步下对计数器进行自增操作。
+接下来我们再看更符合 Go 设计惯例的实现，也就是使用`无缓冲 channel 替代锁`后的实现：
 ```go
-func f(ch chan int) {
-	for {
-		v, ok := <-ch
-		if !ok {
-			fmt.Printf("通道已关闭")
-			break
-		}
-		fmt.Printf("value:%#v  ok:%#v\n", v, ok)
-	}
+type counterchan struct {  
+   c chan int  
+   i int  
+}  
+  
+func NewCounter() *counterchan {  
+   cter := &counterchan{  
+   // 这是无缓冲的chan
+      c: make(chan int),  
+   }  
+   go func() {  
+   // 无限循环，会阻塞在这里
+      for {  
+         cter.i++  // i+1
+         cter.c <- cter.i  //发送给chan，这是必须有人接收，否则会阻塞在这
+      }    
+   }()  
+   // 返回chan
+   return cter  
+}  
+  
+// 返回channel里的数值
+func (cter *counterchan) Increase() int {  
+   return <-cter.c  
+}  
+  
+func TestChanMutex(t *testing.T) { 
+   // 
+   cter := NewCounter()  
+  
+   for i := 0; i < 10; i++ {  
+      wg.Add(1)  
+      go func(i int) {  
+         v := cter.Increase() // 这里开始接收。
+         fmt.Printf("goroutine-%d: current counter value is %d\n", i, v)  
+         wg.Done()  
+      }(i)  
+   }  
+   wg.Wait()  
 }
-func TestChan21(t *testing.T) {
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2
-	close(ch)
-	f(ch)
-}
 ```
 
-输出
-
-```
-value:1  ok:true
-value:2  ok:true
-通道已关闭
-```
-
-{{< admonition type=tip title="分析"  >}}
-
-- 上面程序在主程序中定义了一个有缓冲的chan，并且往里面发送了两个值后关闭了通道。
-- f函数用无限循环来从ch中读取数据。
-- 利用多返回值判断chan中还有没有数据
-
+- 创建NewCounter() 函数，里面的无限循环会阻塞在`cter.c <- cter.i `   发。
+- 直到下面的goroutine调用`Increase() `函数才会执行，收
+- 通过一发一收，进行控制，利用的就是无缓冲channel的同步阻塞特性，这样就不会产生冲突
+这个实现中，我们将计数器操作全部交给一个独立的 Goroutine 去处理，并通过无缓冲 channel 的同步阻塞特性，实现了计数器的控制。这样其他 Goroutine 通过 Increase 函数试图增加计数器值的动作，**实质上就转化为了一次无缓冲 channel 的接收动作**。
+这种并发设计逻辑更符合 Go 语言所倡导的“不要通过共享内存来通信，而是通过通信来共享内存”的原则。
 {{< /admonition >}}
 
 
-## 3.8 单向channel
-
-在某些场景下我们可能会将通道作为参数在多个任务函数间进行传递，通常我们会选择在不同的任务函数中对通道的使用进行限制，比如限制通道在某个函数中只能执行发送或只能执行接收操作。想象一下，我们现在有Producer和Consumer两个函数，其中Producer函数会返回一个通道，并且会持续将符合条件的数据发送至该通道，并在发送完成后将该通道关闭。而Consumer函数的任务是从通道中接收值进行计算，这两个函数之间通过Processer函数返回的通道进行通信。完整的示例代码如下。
-
-{{< admonition type=tip title="分析"  >}}
-
-```go
-func Producer() chan int {
-	ch := make(chan int, 2)
-	go func() {
-		for i := 0; i < 10; i++ {
-			if i%2 == 1 {
-				ch <- i
-			}
-		}
-		close(ch)
-	}()
-	return ch
-}
-
-func Consumer(ch chan int) int {
-	sum := 0
-	for v := range ch {
-		sum += v
-	}
-	return sum
-}
-
-func TestChan31(t *testing.T) {
-	ch := Producer()
-	res := Consumer(ch)
-	fmt.Println(res)
-}
-
-```
-
-上面的demo很简单，Producer往chan里发送数据，Consumer从chan里取数据进行求和操作。
-
-从上面的示例代码中可以看出正常情况下`Consumer`函数中只会对通道进行接收操作，但是这不代表不可以在`Consumer`函数中对通道进行发送操作。作为`Producer`函数的提供者，我们在返回通道的时候可能只希望调用方拿到返回的通道后只能对其进行接收操作。但是我们没有办法阻止在`Consumer`函数中对通道进行发送操作。
-
-Go语言中提供了**`单向通道`**来处理这种需要限制通道只能进行某种操作的情况。
-
-{{< /admonition >}}
-
-```go
-<- chan int // 只接收通道，只能接收不能发送
-chan <- int // 只发送通道，只能发送不能接收
-```
-
-其中，箭头`<-`和关键字`chan`的相对位置表明了当前通道允许的操作，这种限制将在编译阶段进行检测。另外对一个只接收通道执行close也是不允许的，因为默认通道的关闭操作应该由发送方来完成。我们使用单向通道将上面的示例代码进行如下改造。
-
-```go
-func Producer2() <-chan int {
-	ch := make(chan int, 2)
-	go func() {
-		for i := 0; i < 10; i++ {
-			if i%2 == 1 {
-				ch <- i
-			}
-		}
-		close(ch)
-	}()
-	return ch
-}
-
-func Consumer2(ch <-chan int) int {
-	sum := 0
-	for v := range ch {
-		sum += v
-	}
-	return sum
-}
-
-func TestChan41(t *testing.T) {
-	ch := Producer()
-	sum := Consumer(ch)
-	fmt.Println(sum)
-}
-```
-
-这一次，Producer函数返回的是一个只接收通道，这就从代码层面限制了该函数返回的通道只能进行接收操作，保证了数据安全。很多读者看到这个示例可能会觉着这样的限制是多余的，但是试想一下如果Producer函数可以在其他地方被其他人调用，你该如何限制他人不对该通道执行发送操作呢？并且返回限制操作的单向通道也会让代码语义更清晰、更易读。
-
-## 3.9 双向chan转单向chan
+# 
 
 在函数传参及任何赋值操作中全向通道（正常通道）可以转换为单向通道，但是无法反向转换。接上面代码
 
@@ -418,95 +477,6 @@ func TestChan42(t *testing.T) {
 	ch3 = ch2
 	v := <-ch3
 	fmt.Println(v)
-}
-```
-
-# 4. select
-
-在某些场景下我们可能需要同时从多个通道接收数据。通道在接收数据时，如果没有数据可以被接收那么当前 goroutine 将会发生阻塞。你也许会写出如下代码尝试使用遍历的方式来实现从多个通道中接收值。
-
-```go
-for{
-    // 尝试从ch1接收值
-    data, ok := <-ch1
-    // 尝试从ch2接收值
-    data, ok := <-ch2
-    …
-}
-```
-
-这种方式虽然可以实现从多个通道接收值的需求，但是程序的运行性能会差很多。Go 语言内置了`select`关键字，使用它可以同时响应多个通道的操作。**并且这样的写法会引发报错。所以不推荐这么写**。
-
-Select 的使用方式类似于之前学到的 switch 语句，它也有一系列 case 分支和一个默认的分支。每个 case 分支会对应一个通道的通信（接收或发送）过程。select 会一直等待，直到其中的某个 case 的通信操作完成时，就会执行该 case 分支对应的语句。具体格式如下：
-
-```go
-select {
-case <-ch1:
-	//...
-case data := <-ch2:
-	//...
-case ch3 <- 10:
-	//...
-default:
-	//默认操作
-}
-```
-
-Select 语句具有以下特点。
-
-- 可处理一个或多个 channel 的发送/接收操作。
-- 如果多个 case 同时满足，select 会**随机**选择一个执行。
-- 对于没有 case 的 select 会一直`阻塞`，可用于阻塞 main 函数，防止退出。
-
-下面的示例代码能够在终端打印出10以内的奇数，我们借助这个代码片段来看一下 select 的具体使用。
-
-```go
-func TestSelect(t *testing.T) {
-	ch := make(chan int, 1)
-	for i := 1; i < 10; i++ {
-		select {
-		case x := <-ch:
-			fmt.Println(x)
-		case ch <- i:
-		}
-	}
-}
-```
-
-{{< admonition type=note title="分析"  >}}
-
-```
-1
-3
-5
-7
-9
-```
-
-示例中的代码首先是创建了一个缓冲区大小为1的通道 ch，进入 for 循环后：
-
-- 第一次循环时 i = 1，select 语句中包含两个 case 分支，此时由于通道中没有值可以接收，所以`x := <-ch` 这个 case 分支不满足，而`ch <- i`这个分支可以执行，会把1发送到通道中，结束本次 for 循环；
-- 第二次 for 循环时，i = 2，由于通道缓冲区已满，所以`ch <- i`这个分支不满足，而`x := <-ch`这个分支可以执行，从通道接收值1并赋值给变量 x ，所以会在终端打印出 1；
-- 后续的 for 循环以此类推会依次打印出3、5、7、9。
-
-{{< /admonition >}}
-
-不知道循环次数，需要使用无限循环了，下面也是很常见的写法，注意default分支要退出循环，不然会阻塞。
-
-```go
-func TestChan23(t *testing.T) {
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2
-LOOP:
-	for {
-		select {
-		case x, ok := <-ch:
-			fmt.Println(x, ok)
-		default:
-			break LOOP
-		}
-	}
 }
 ```
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "file": "go语言/并发编程基础篇.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "file": "go语言/并发编程基础篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "file": "go语言/并发编程基础篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md"
+                "file": "go语言/并发编程基础篇.md"
               }
             }
           }
@@ -148,22 +148,24 @@
   },
   "active": "167cc7e2fbf84285",
   "lastOpenFiles": [
-    "读书笔记/image-20230415101110844.png.md",
-    "读书笔记/读书笔记~俞敏洪演讲.md",
-    "go语言/Go语言学习之路.md",
+    "go语言/channel进阶篇.md",
+    "并发编程20230416212421.png.md",
+    "go语言/并发编程基础篇.md",
+    "go语言/并发编程进阶篇.md",
     "go语言/context进阶篇.md",
+    "go语言/context基础篇.md",
+    "go语言/Go语言学习之路.md",
+    "读书笔记/读书笔记~自卑与超越.md",
+    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "读书笔记/image-20230415101110844.png.md",
     "读书笔记/读书笔记~思考的整理学.md",
     "读书笔记/读书笔记~聊聊读书.md",
-    "读书笔记/读书笔记~自卑与超越.md",
     "读书笔记/读书笔记~我不向这个世界俯首称臣.md",
     "读书笔记/读书笔记~生命重于泰山.md",
     "读书笔记/读书笔记~打理生活.md",
     "读书笔记/20230416102012.png.md",
     "读书笔记/读书笔记~被讨厌的勇气.md",
     "读书笔记/读书笔记~岁月，在记忆里重逢.md",
-    "go语言/并发编程进阶篇.md",
-    "go语言/并发编程基础篇.md",
-    "go语言/channel进阶篇.md",
     "并发编程/20230407211300.png.md",
     "并发编程",
     "image/20230402115502.png",
