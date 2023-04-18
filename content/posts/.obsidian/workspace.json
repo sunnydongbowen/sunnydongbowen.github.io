@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7f8502724646f6e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/Go程序是怎么样的.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "file": "go语言/Go程序是怎么样的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
+                "file": "go语言/Go程序是怎么样的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md"
+                "file": "go语言/Go程序是怎么样的.md"
               }
             }
           }
@@ -171,8 +183,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "945a984bd04beb43",
+  "active": "7f8502724646f6e4",
   "lastOpenFiles": [
+    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "go语言/Go程序是怎么样的.md",
     "go语言/Go的设计哲学.md",
     "go语言/Go语言的前世今生.md",
     "go语言/Go VS Python.md",
@@ -186,7 +200,6 @@
     "go语言/context基础篇.md",
     "go语言/Go语言学习之路.md",
     "读书笔记/读书笔记~自卑与超越.md",
-    "读书笔记/读书笔记~俞敏洪演讲.md",
     "读书笔记/image-20230415101110844.png.md",
     "读书笔记/读书笔记~思考的整理学.md",
     "读书笔记/读书笔记~聊聊读书.md",
@@ -206,7 +219,6 @@
     "image/image-20230331201128453.png",
     "2023-04-15.md",
     "并发编程/20230406183622.png.md",
-    "go语言/go web/http.md",
     "go语言/go web",
     "python",
     "读书笔记"
