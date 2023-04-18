@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go VS Python.md",
+                "file": "go语言/Go语言的前世今生.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go VS Python.md",
+                "file": "go语言/Go语言的前世今生.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go VS Python.md",
+                "file": "go语言/Go语言的前世今生.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go VS Python.md"
+                "file": "go语言/Go语言的前世今生.md"
               }
             }
           }
@@ -173,14 +173,14 @@
   },
   "active": "8df08b56f010bd4d",
   "lastOpenFiles": [
-    "go语言/Go语言的前世今生.md",
     "go语言/Go的设计哲学.md",
+    "go语言/Go VS Python.md",
+    "go语言/Go语言的前世今生.md",
     "go语言/并发编程基础篇.md",
     "go语言/并发编程进阶篇.md",
     "go语言/channel进阶篇.md",
     "go基础/20230418132405.png.md",
     "go基础",
-    "go语言/Go VS Python.md",
     "并发编程20230416212421.png.md",
     "go语言/context进阶篇.md",
     "go语言/context基础篇.md",
