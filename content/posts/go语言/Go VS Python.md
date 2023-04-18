@@ -15,7 +15,7 @@ categories : [
 
 {{< /admonition >}}
 
-#  应用场景
+## 应用场景
 
 从应用领域看这两门语言的对比
 {{< admonition type=tip title="go的应用领域"  >}}
@@ -41,7 +41,7 @@ categories : [
 遇到这些，想都不要想，用py。最好不要用py做web项目，学那些web框架，框架我学了gin一个能够灵活运用写项目就够用了。
 
 {{< /admonition >}}
-# 各自擅长的领域
+## 各自擅长的领域
 
 {{< admonition type=tip  title="go完胜的领域" >}}
 
@@ -69,7 +69,7 @@ go env -w CGO_ENABLED=0
 
 {{< /admonition >}}
 
-# chatgpt的回答
+## chatgpt的回答
 {{< admonition type=success  title="chatgpt的回答" >}}
 Go 和 Python 是两种不同的编程语言，各有优缺点，适用于不同的场景和需求。下面是一些 Go 和 Python 的对比：  
   
@@ -84,7 +84,7 @@ Go 和 Python 是两种不同的编程语言，各有优缺点，适用于不同
 总的来说，Go 适合于高性能、高并发的场景，如网络编程、分布式系统等；Python 适合于数据分析、Web 开发、机器学习等场景。具体选择哪种语言，需要根据具体的需求和项目情况来决定。
 {{< /admonition >}}
 
-# 个人看法
+## 个人看法
 {{< admonition type=note title="个人看法" >}}
 我个人是很喜欢go的，也看了网上关于go和py的争论，正如上面介绍的，
 - 应用领域不同，选择不同。有些不涉及语言，选什么都可以。不要去看网上那些毫无意义的争论，喷go不好的只是他们没学好罢了。
