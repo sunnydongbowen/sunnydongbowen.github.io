@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/并发编程基础篇.md",
+                "file": "go语言/Go VS Python.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e5d30d58da86c8c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/Go的设计哲学.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/并发编程基础篇.md",
+                "file": "go语言/Go的设计哲学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/并发编程基础篇.md",
+                "file": "go语言/Go的设计哲学.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/并发编程基础篇.md"
+                "file": "go语言/Go的设计哲学.md"
               }
             }
           }
@@ -146,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "167cc7e2fbf84285",
+  "active": "945a984bd04beb43",
   "lastOpenFiles": [
+    "go语言/Go VS Python.md",
+    "go语言/Go的设计哲学.md",
     "go语言/channel进阶篇.md",
     "go语言/并发编程基础篇.md",
     "并发编程20230416212421.png.md",
@@ -181,7 +196,6 @@
     "go语言/go web",
     "python",
     "go语言/go web/gin的middleware.md",
-    "go语言/go web/gin文件上传.md",
     "读书笔记"
   ]
 }

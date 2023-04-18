@@ -456,29 +456,12 @@ func TestChanMutex(t *testing.T) {
 {{< /admonition >}}
 
 
-# 
+# 带缓冲 channel 的惯用法
+带缓冲的 channel 与无缓冲的 channel 的最大不同之处，就在于它的异步性。也就是说，对一个带缓冲 channel，在缓冲区未满的情况下，对它进行发送操作的 Goroutine 不会阻塞挂起；在缓冲区有数据的情况下，对它进行接收操作的 Goroutine 也不会阻塞挂起。
 
-在函数传参及任何赋值操作中全向通道（正常通道）可以转换为单向通道，但是无法反向转换。接上面代码
+这种特性让带缓冲的 channel 有着与无缓冲 channel 不同的应用场合。接下来我们一个个来分析。
+## 消息队列
 
-```go
-func TestChan42(t *testing.T) {
-	var ch1 = make(chan int, 1)
-	ch1 <- 10
-	close(ch1)
-	// 函数传参时将ch3转为单向通道
-	res := Consumer2(ch1)
-	fmt.Println(res)
-
-	ch2 := make(chan int, 1)
-	ch2 <- 12
-	//声明一个只接收通道
-	var ch3 <-chan int
-	// 赋值时转为单向通道
-	ch3 = ch2
-	v := <-ch3
-	fmt.Println(v)
-}
-```
 
 
 
