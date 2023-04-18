@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8df08b56f010bd4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/Go语言的前世今生.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go的设计哲学.md",
+                "file": "go语言/Go语言的前世今生.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go的设计哲学.md",
+                "file": "go语言/Go语言的前世今生.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go的设计哲学.md"
+                "file": "go语言/Go语言的前世今生.md"
               }
             }
           }
@@ -159,14 +171,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "945a984bd04beb43",
+  "active": "8df08b56f010bd4d",
   "lastOpenFiles": [
-    "go语言/Go VS Python.md",
     "go语言/Go的设计哲学.md",
-    "go语言/channel进阶篇.md",
     "go语言/并发编程基础篇.md",
-    "并发编程20230416212421.png.md",
     "go语言/并发编程进阶篇.md",
+    "go语言/channel进阶篇.md",
+    "go语言/Go语言的前世今生.md",
+    "go基础/20230418132405.png.md",
+    "go基础",
+    "go语言/Go VS Python.md",
+    "并发编程20230416212421.png.md",
     "go语言/context进阶篇.md",
     "go语言/context基础篇.md",
     "go语言/Go语言学习之路.md",
@@ -192,10 +207,8 @@
     "2023-04-15.md",
     "并发编程/20230406183622.png.md",
     "go语言/go web/http.md",
-    "go语言/go web/gin~session.md",
     "go语言/go web",
     "python",
-    "go语言/go web/gin的middleware.md",
     "读书笔记"
   ]
 }
