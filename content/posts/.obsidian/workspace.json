@@ -20,43 +20,19 @@
             }
           },
           {
-            "id": "e5d30d58da86c8c9",
+            "id": "ebf9a63cd7a27230",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go的设计哲学.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8df08b56f010bd4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "读书笔记/读书笔记~俞敏洪演讲.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f8502724646f6e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/Go程序是怎么样的.md",
+                "file": "聊聊那些年我折腾过的博客.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go程序是怎么样的.md",
+                "file": "聊聊那些年我折腾过的博客.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go程序是怎么样的.md",
+                "file": "聊聊那些年我折腾过的博客.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go程序是怎么样的.md"
+                "file": "聊聊那些年我折腾过的博客.md"
               }
             }
           }
@@ -183,21 +159,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7f8502724646f6e4",
+  "active": "ebf9a63cd7a27230",
   "lastOpenFiles": [
-    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "python/py~聊聊Python在我工作中的应用.md",
+    "go语言/channel进阶篇.md",
+    "go语言/context基础篇.md",
+    "聊聊那些年我折腾过的博客.md",
+    "go语言/slice基础篇.md",
+    "go语言/Go VS Python.md",
+    "go语言/Go module 详细.md",
+    "go语言/Go module初步.md",
+    "go语言/context进阶篇.md",
     "go语言/Go程序是怎么样的.md",
+    "读书笔记/读书笔记~俞敏洪演讲.md",
     "go语言/Go的设计哲学.md",
     "go语言/Go语言的前世今生.md",
-    "go语言/Go VS Python.md",
     "go语言/并发编程基础篇.md",
     "go语言/并发编程进阶篇.md",
-    "go语言/channel进阶篇.md",
     "go基础/20230418132405.png.md",
     "go基础",
     "并发编程20230416212421.png.md",
-    "go语言/context进阶篇.md",
-    "go语言/context基础篇.md",
     "go语言/Go语言学习之路.md",
     "读书笔记/读书笔记~自卑与超越.md",
     "读书笔记/image-20230415101110844.png.md",
@@ -207,9 +188,6 @@
     "读书笔记/读书笔记~生命重于泰山.md",
     "读书笔记/读书笔记~打理生活.md",
     "读书笔记/20230416102012.png.md",
-    "读书笔记/读书笔记~被讨厌的勇气.md",
-    "读书笔记/读书笔记~岁月，在记忆里重逢.md",
-    "并发编程/20230407211300.png.md",
     "并发编程",
     "image/20230402115502.png",
     "image/20230330175350775.png",
@@ -217,8 +195,6 @@
     "image/image-20230402185252342.png",
     "image/image-20230331201605577.png",
     "image/image-20230331201128453.png",
-    "2023-04-15.md",
-    "并发编程/20230406183622.png.md",
     "go语言/go web",
     "python",
     "读书笔记"
