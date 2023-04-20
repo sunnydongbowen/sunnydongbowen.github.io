@@ -51,8 +51,7 @@ Go Module 的核心是一个名为 go.mod 的文件，在这个文件中存储�
 ```go
 $go mod init github.com/bigwhite/hellomodule
 go: creating new go.mod: module github.com/bigwhite/hellomodule
-go: to add module requirements and sums:
-  go mod tidy
+go: to add module requirements and sums:go mod tidy
 ```
 
 你会看到，go mod init 命令的执行结果是在当前目录下生成了一个 go.mod 文件：

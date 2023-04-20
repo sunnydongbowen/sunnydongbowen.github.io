@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "聊聊那些年我折腾过的博客.md",
+                "file": "go语言/slice基础篇.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "聊聊那些年我折腾过的博客.md",
+                "file": "go语言/slice基础篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "聊聊那些年我折腾过的博客.md",
+                "file": "go语言/slice基础篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "聊聊那些年我折腾过的博客.md"
+                "file": "go语言/slice基础篇.md"
               }
             }
           }
@@ -161,25 +161,25 @@
   },
   "active": "ebf9a63cd7a27230",
   "lastOpenFiles": [
+    "go语言/Go语言学习之路.md",
+    "go语言/slice基础篇.md",
+    "go语言/Go程序是怎么样的.md",
+    "go语言/Go module初步.md",
+    "go语言/Go module 详细.md",
+    "go语言/并发编程基础篇.md",
+    "聊聊那些年我折腾过的博客.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "go语言/channel进阶篇.md",
     "go语言/context基础篇.md",
-    "聊聊那些年我折腾过的博客.md",
-    "go语言/slice基础篇.md",
     "go语言/Go VS Python.md",
-    "go语言/Go module 详细.md",
-    "go语言/Go module初步.md",
     "go语言/context进阶篇.md",
-    "go语言/Go程序是怎么样的.md",
     "读书笔记/读书笔记~俞敏洪演讲.md",
     "go语言/Go的设计哲学.md",
     "go语言/Go语言的前世今生.md",
-    "go语言/并发编程基础篇.md",
     "go语言/并发编程进阶篇.md",
     "go基础/20230418132405.png.md",
     "go基础",
     "并发编程20230416212421.png.md",
-    "go语言/Go语言学习之路.md",
     "读书笔记/读书笔记~自卑与超越.md",
     "读书笔记/image-20230415101110844.png.md",
     "读书笔记/读书笔记~思考的整理学.md",
