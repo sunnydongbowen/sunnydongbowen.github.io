@@ -21,6 +21,26 @@ categories : [
 > 🏵️Go基础语法
 
 
+[Go语言的前世今生](https://sunnydongbowen.github.io/go%E8%AF%AD%E8%A8%80%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+
+[Go程序是怎么样的](https://sunnydongbowen.github.io/go%E7%A8%8B%E5%BA%8F%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+
+[Go的设计哲学](https://sunnydongbowen.github.io/go%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+
+[Go VS Python](https://sunnydongbowen.github.io/go-vs-python/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `self`）
+
+[Go module初步](https://sunnydongbowen.github.io/go-module%E5%88%9D%E6%AD%A5/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+
+[Go module详细](https://sunnydongbowen.github.io/go-module-%E8%AF%A6%E7%BB%86/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟🌟 `  `tony白专栏`）
+
+[slice基础篇](https://sunnydongbowen.github.io/slice%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
+
+[map基础篇](https://sunnydongbowen.github.io/map%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
+
+[if语法](https://sunnydongbowen.github.io/if%E8%AF%AD%E6%B3%95/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
+
+[for循环](https://sunnydongbowen.github.io/for%E5%BE%AA%E7%8E%AF/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
+
 
 
 > ✏️ Go语法进阶
