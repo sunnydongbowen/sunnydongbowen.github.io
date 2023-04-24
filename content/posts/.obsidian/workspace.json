@@ -78,9 +78,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c538055c83f16981",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/自定义类型与类型别名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "35eaf21890a1f040",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/函数基础篇.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c918a4c72815f467",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/Go语言学习之路.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -146,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/自愈力.md",
+                "file": "go语言/Go语言学习之路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/自愈力.md",
+                "file": "go语言/Go语言学习之路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/自愈力.md"
+                "file": "go语言/Go语言学习之路.md"
               }
             }
           }
@@ -207,10 +243,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cc2777bbfa1ea3de",
+  "active": "c918a4c72815f467",
   "lastOpenFiles": [
-    "读书笔记/放下即幸福.md",
+    "go语言/方法基础篇.md",
+    "go语言/函数基础篇.md",
+    "go语言/自定义类型与类型别名.md",
     "读书笔记/自愈力.md",
+    "读书笔记/放下即幸福.md",
     "读书笔记/生命卡点.md",
     "读书笔记/读书笔记~奋斗吧，青春.md",
     "读书笔记/读书笔记~暖暖的相伴.md",

@@ -51,6 +51,10 @@ categories : [
 
 [for循环](https://sunnydongbowen.github.io/for%E5%BE%AA%E7%8E%AF/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
+[学习方法篇(tony白专栏笔记)](https://sunnydongbowen.github.io/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%AF%87tony%E7%99%BD%E4%B8%93%E6%A0%8F%E7%AC%94%E8%AE%B0/)（`重要指数🌟🌟 `  `难度指数🌟 `  `tony白专栏`）
+
+[学习资源(个人)](https://sunnydongbowen.github.io/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%AA%E4%BA%BA/)（`重要指数🌟🌟 `  `难度指数🌟🌟 `  `self`）
+
 
 > ✏️ Go语法进阶
 
