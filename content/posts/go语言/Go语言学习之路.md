@@ -29,9 +29,19 @@ categories : [
 
 [Go VS Python](https://sunnydongbowen.github.io/go-vs-python/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `self`）
 
-[Go module初步](https://sunnydongbowen.github.io/go-module%E5%88%9D%E6%AD%A5/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+[Go module初步](https://sunnydongbowen.github.io/go-module%E5%88%9D%E6%AD%A5/)（`重要指数🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
 
-[Go module详细](https://sunnydongbowen.github.io/go-module-%E8%AF%A6%E7%BB%86/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟🌟 `  `tony白专栏`）
+[Go module详细](https://sunnydongbowen.github.io/go-module-%E8%AF%A6%E7%BB%86/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
+
+[第一个go程序](https://sunnydongbowen.github.io/%E7%AC%AC%E4%B8%80%E4%B8%AAgo%E7%A8%8B%E5%BA%8F/)  （`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `self`）
+
+[var](https://sunnydongbowen.github.io/var/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏，李文周博客及视频`）
+
+[const](https://sunnydongbowen.github.io/const/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏，李文周博客及视频`）
+
+[变量遮蔽和作用域](https://sunnydongbowen.github.io/%E5%8F%98%E9%87%8F%E9%81%AE%E8%94%BD%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏）
+
+[for循环](https://sunnydongbowen.github.io/for%E5%BE%AA%E7%8E%AF/)
 
 [slice基础篇](https://sunnydongbowen.github.io/slice%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
 
@@ -40,7 +50,6 @@ categories : [
 [if语法](https://sunnydongbowen.github.io/if%E8%AF%AD%E6%B3%95/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
 [for循环](https://sunnydongbowen.github.io/for%E5%BE%AA%E7%8E%AF/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
-
 
 
 > ✏️ Go语法进阶
