@@ -66,9 +66,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cc2777bbfa1ea3de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "读书笔记/自愈力.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -134,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/放下即幸福.md",
+                "file": "读书笔记/自愈力.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/放下即幸福.md",
+                "file": "读书笔记/自愈力.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/放下即幸福.md"
+                "file": "读书笔记/自愈力.md"
               }
             }
           }
@@ -195,10 +207,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a20d15224abe78b4",
+  "active": "cc2777bbfa1ea3de",
   "lastOpenFiles": [
-    "读书笔记/生命卡点.md",
     "读书笔记/放下即幸福.md",
+    "读书笔记/自愈力.md",
+    "读书笔记/生命卡点.md",
     "读书笔记/读书笔记~奋斗吧，青春.md",
     "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/读书笔记~生命重于泰山.md",
