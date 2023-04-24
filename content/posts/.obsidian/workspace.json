@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/if语法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7fdfaee02eb249cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/学习方法篇(tony白专栏笔记).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3da45c35d979b5e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/学习资源(个人).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/学习资源(个人).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/学习资源(个人).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go语言学习之路.md"
+                "file": "go语言/学习资源(个人).md"
               }
             }
           }
@@ -146,10 +171,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f638139f1fd930d3",
+  "active": "3da45c35d979b5e3",
   "lastOpenFiles": [
-    "go语言/var.md",
+    "go语言/学习方法篇(tony白专栏笔记).md",
+    "go语言/学习资源(个人).md",
     "go语言/if语法.md",
+    "go语言/Go语言学习之路.md",
+    "go语言/var.md",
     "go语言/Go程序是怎么样的.md",
     "go语言/Go的设计哲学.md",
     "聊聊那些年我折腾过的博客.md",
