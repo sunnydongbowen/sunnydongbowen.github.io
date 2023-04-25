@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/for循环.md",
                 "mode": "source",
                 "source": false
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/for循环.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/for循环.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go语言学习之路.md"
+                "file": "go语言/for循环.md"
               }
             }
           }
@@ -245,6 +245,8 @@
   },
   "active": "c918a4c72815f467",
   "lastOpenFiles": [
+    "go语言/var.md",
+    "go语言/Go语言学习之路.md",
     "go语言/方法基础篇.md",
     "go语言/函数基础篇.md",
     "go语言/自定义类型与类型别名.md",
@@ -259,8 +261,6 @@
     "go语言/学习资源(个人).md",
     "go语言/学习方法篇(tony白专栏笔记).md",
     "go语言/if语法.md",
-    "go语言/Go语言学习之路.md",
-    "go语言/var.md",
     "go语言/Go程序是怎么样的.md",
     "go语言/Go的设计哲学.md",
     "聊聊那些年我折腾过的博客.md",

@@ -8,7 +8,7 @@ categories : [
      "Go语言",
  ]
 ---
-在其他编程语言中，循环一般有for和while循环两种方式，但是在Go中，就只有一种，那就是for循环。
+> 在其他编程语言中，循环一般有for和while循环两种方式，但是在Go中，就只有一种，那就是for循环。
 
 ## 1. for 循环流程
 
@@ -125,18 +125,17 @@ for ; ; {
 
 ```go
 var sl = []int{1, 2, 3, 4, 5}
-	for i := 0; i < len(sl); i++ {
-		fmt.Printf("sl[%d] = %d", i, sl[i])
-	}
+for i := 0; i < len(sl); i++ {
+	fmt.Printf("sl[%d] = %d", i, sl[i])
+}
 ```
 
 变量 i 作为切片下标，逐一将切片中的元素读取了出来。不过，这样就有点麻烦了。其实，针对像切片这样的复合数据类型，还有 Go 原生的字符串类型（string），Go 语言提供了一个更方便的“语法糖”形式：for range。现在我们就来写一个等价于上面代码的 for range 循环：for i, v := range sl { fmt.Printf("sl[%d] = %d\n", i, v)
 
 ```go
-fmt.Println()
-	for i, v := range sl {
-		fmt.Printf("sl[%d] = %d", i, v)
-	}
+for i, v := range sl {
+	fmt.Printf("sl[%d] = %d", i, v)
+}
 ```
 
 我们看到，for range 循环形式与 for 语句经典形式差异较大，除了循环体保留了下来，其余组成部分都“不见”了。其实那几部分已经被融合到 for range 的语义中了。
@@ -192,7 +191,7 @@ for range sl {
 ```go
 var s = "中国人"
 for i, v := range s {
-    fmt.Printf("%d %s 0x%x\\n", i, string(v), v)
+    fmt.Printf("%d %s 0x%x\n", i, string(v), v)
 }
 ```
 
@@ -256,7 +255,7 @@ func main() {
 	//for range ,这个用的也比较多
 	s := "Hello 博文"
 	for i, v := range s {
-		fmt.Printf("%d %c\\n", i, v) //输出索引，和索引对应的值，c表示输出单个字符，d表示十进制整数
+		fmt.Printf("%d %c\n", i, v) //输出索引，和索引对应的值，c表示输出单个字符，d表示十进制整数
 	}
 }
 ```
@@ -297,16 +296,16 @@ func main() {
 
 ## 8. for循环中使用哑元变量
 
-如果不想定义变量或者用不到，可以使用匿名变量进行接收。这样也不需要捕捉err。
+> 如果不想定义变量或者用不到，可以使用匿名变量进行接收。这样也不需要捕捉err。
 
 ```go
 func main() {
 	s:="hello"
 	for i,v :=range s{
-		fmt.Printf("%d %c\\n",i,v)
+		fmt.Printf("%d %c\n",i,v)
 	}
 	for _,v:=range s {
-		fmt.Printf("%c\\n",v)
+		fmt.Printf("%c\n",v)
 	}
 }
 ```
@@ -324,7 +323,7 @@ func main() {
 				flag=true
 				break
 			}
-			fmt.Printf("%d-%c\\n",i,j)
+			fmt.Printf("%d-%c\n",i,j)
         if flag==true{
         	break
              }
@@ -346,7 +345,7 @@ func main() {
 				flag=true
 				break
 			}
-			fmt.Printf("%d-%c\\n",i,j)
+			fmt.Printf("%d-%c\n",i,j)
         if flag==true{
         	goto  xx
              }
