@@ -42,6 +42,10 @@ categories : [
 
 [const](https://sunnydongbowen.github.io/const/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏，李文周博客及视频`）
 
+[类型](https://sunnydongbowen.github.io/%E7%B1%BB%E5%9E%8B/)（`重要指数🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
+
+[运算符](https://sunnydongbowen.github.io/%E8%BF%90%E7%AE%97%E7%AC%A6/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`
+
 [变量遮蔽和作用域](https://sunnydongbowen.github.io/%E5%8F%98%E9%87%8F%E9%81%AE%E8%94%BD%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
 [自定义类型与类型别名](https://sunnydongbowen.github.io/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
@@ -50,15 +54,27 @@ categories : [
 
 [map基础篇](https://sunnydongbowen.github.io/map%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
 
+[指针](https://sunnydongbowen.github.io/%E6%8C%87%E9%92%88/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟🌟  ` `李文周博客及视频，self`)
+
 {{< /admonition >}}
+
+{{< admonition type=note title="流程控制与函数"  >}}
+
+[go代码的执行顺序](https://sunnydongbowen.github.io/go%E4%BB%A3%E7%A0%81%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
 [if语法](https://sunnydongbowen.github.io/if%E8%AF%AD%E6%B3%95/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
 [for循环](https://sunnydongbowen.github.io/for%E5%BE%AA%E7%8E%AF/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
 
+[swtich-case](https://sunnydongbowen.github.io/swtich-case/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 `  `tony白专栏`）
+
 [函数基础篇](https://sunnydongbowen.github.io/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
 
 [方法基础篇](https://sunnydongbowen.github.io/%E6%96%B9%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
+
+[panic](https://sunnydongbowen.github.io/panic/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
+
+{{< /admonition >}}
 
 
 {{< admonition type=tip  title="学习方法篇"  >}}
