@@ -82,6 +82,8 @@ categories : [
 
 [学习资源(个人)](https://sunnydongbowen.github.io/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%AA%E4%BA%BA/)（`重要指数🌟🌟 `  `难度指数🌟🌟 `  `self`）
 
+[tony白专栏推荐的学习资源](https://sunnydongbowen.github.io/tony%E7%99%BD%E4%B8%93%E6%A0%8F%E6%8E%A8%E8%8D%90%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/)（`重要指数🌟🌟 🌟`  `难度指数🌟🌟 `  `tony白专栏`）
+
 {{< /admonition >}}
 
 
