@@ -8,109 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f638139f1fd930d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/if语法.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7fdfaee02eb249cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/学习方法篇(tony白专栏笔记).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3da45c35d979b5e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "读书笔记/读书笔记~奋斗吧，青春.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f292b09f27d213c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "读书笔记/放下即幸福.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a20d15224abe78b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "读书笔记/放下即幸福.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cc2777bbfa1ea3de",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go VS Python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a2230d39a0aff298",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/类型.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "17a504bb3476390a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/运算符.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aa15739684950488",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go语言/指针.md",
-                "mode": "source",
+                "file": "go语言/slice基础篇.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -126,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7434ffae986afcba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/go代码的执行顺序.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -160,8 +76,8 @@
                 "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               }
             }
@@ -194,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/panic.md",
+                "file": "go语言/go代码的执行顺序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -211,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/panic.md",
+                "file": "go语言/go代码的执行顺序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -234,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/panic.md"
+                "file": "go语言/go代码的执行顺序.md"
               }
             }
           }
@@ -255,13 +171,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08a58bdf02e3a826",
+  "active": "7434ffae986afcba",
   "lastOpenFiles": [
-    "go语言/指针.md",
+    "聊聊那些年我折腾过的博客.md",
+    "go语言/go代码的执行顺序.md",
+    "go语言/slice基础篇.md",
+    "go语言/Go VS Python.md",
+    "go语言/if语法.md",
+    "go语言/学习方法篇(tony白专栏笔记).md",
+    "读书笔记/读书笔记~奋斗吧，青春.md",
+    "读书笔记/放下即幸福.md",
     "go语言/panic.md",
+    "go语言/指针.md",
     "go语言/运算符.md",
     "go语言/类型.md",
-    "go语言/Go VS Python.md",
     "go语言/Go程序是怎么样的.md",
     "读书笔记/自愈力.md",
     "go语言/for循环.md",
@@ -270,18 +193,11 @@
     "go语言/方法基础篇.md",
     "go语言/函数基础篇.md",
     "go语言/自定义类型与类型别名.md",
-    "读书笔记/放下即幸福.md",
     "读书笔记/生命卡点.md",
-    "读书笔记/读书笔记~奋斗吧，青春.md",
     "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/读书笔记~生命重于泰山.md",
     "读书笔记/image-20230415101110844.png.md",
     "读书笔记/读书笔记~被讨厌的勇气.md",
-    "go语言/学习资源(个人).md",
-    "go语言/学习方法篇(tony白专栏笔记).md",
-    "go语言/if语法.md",
-    "go语言/Go的设计哲学.md",
-    "聊聊那些年我折腾过的博客.md",
-    "go语言/Go语言的前世今生.md"
+    "go语言/学习资源(个人).md"
   ]
 }
