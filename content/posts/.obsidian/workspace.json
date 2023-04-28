@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/函数学习笔记(知乎).md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "函数",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -134,7 +134,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -154,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/函数学习笔记(知乎).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/Go语言学习之路.md",
+                "file": "go语言/函数学习笔记(知乎).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/Go语言学习之路.md"
+                "file": "go语言/函数学习笔记(知乎).md"
               }
             }
           }
@@ -217,9 +218,9 @@
   },
   "active": "9fcb9e6256791152",
   "lastOpenFiles": [
+    "go语言/Go语言学习之路.md",
     "go语言/map基础篇.md",
     "go语言/if语法.md",
-    "go语言/Go语言学习之路.md",
     "go语言/Go VS Python.md",
     "go语言/Go程序是怎么样的.md",
     "go语言/函数学习笔记(知乎).md",
