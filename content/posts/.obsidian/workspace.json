@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/vi命令学习.md",
+                "file": "go语言/Go语言学习之路.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/vi命令学习.md",
+                "file": "go语言/Go语言学习之路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/vi命令学习.md",
+                "file": "go语言/Go语言学习之路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/vi命令学习.md"
+                "file": "go语言/Go语言学习之路.md"
               }
             }
           }
@@ -217,8 +217,8 @@
   },
   "active": "9fcb9e6256791152",
   "lastOpenFiles": [
-    "Linux云计算/云服务器分区.md",
     "Linux云计算/vi命令学习.md",
+    "Linux云计算/云服务器分区.md",
     "Linux云计算/文件操作.md",
     "Linux云计算/sed与awk.md",
     "Linux云计算/ansible.md",

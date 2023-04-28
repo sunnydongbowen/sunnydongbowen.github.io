@@ -71,6 +71,10 @@ categories : [
 
 [方法基础篇](https://sunnydongbowen.github.io/%E6%96%B9%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
 
+[值recevier和指针recevier](https://sunnydongbowen.github.io/%E5%80%BCrecevier%E5%92%8C%E6%8C%87%E9%92%88%E5%9E%8Brecevier/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 🌟` `tony白专栏`）
+
+[interface](https://sunnydongbowen.github.io/%E6%8E%A5%E5%8F%A3/)（`重要指数🌟🌟🌟 `  `难度指数🌟🌟 ` `李文周博客及视频`）
+
 [panic](https://sunnydongbowen.github.io/panic/)（`重要指数🌟🌟🌟🌟 `  `难度指数🌟🌟 ` `tony白专栏`）
 
 {{< /admonition >}}
