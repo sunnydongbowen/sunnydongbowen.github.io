@@ -117,7 +117,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Go基础语法",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -217,13 +217,18 @@
   },
   "active": "9fcb9e6256791152",
   "lastOpenFiles": [
+    "go语言/map基础篇.md",
+    "go语言/if语法.md",
+    "go语言/Go语言学习之路.md",
+    "go语言/Go VS Python.md",
+    "go语言/Go程序是怎么样的.md",
+    "go语言/函数学习笔记(知乎).md",
     "Linux云计算/vi命令学习.md",
     "Linux云计算/云服务器分区.md",
     "Linux云计算/文件操作.md",
     "Linux云计算/sed与awk.md",
     "Linux云计算/ansible.md",
     "阅读指南.md",
-    "go语言/Go语言学习之路.md",
     "聊聊那些年我折腾过的博客.md",
     "go语言/算法/Go刷算法.md",
     "go语言/算法",
@@ -233,16 +238,11 @@
     "go语言/slice基础篇.md",
     "go语言/tony白专栏推荐的学习资源.md",
     "读书笔记/读书笔记~被讨厌的勇气.md",
-    "go语言/Go VS Python.md",
-    "go语言/if语法.md",
     "go语言/学习方法篇(tony白专栏笔记).md",
     "读书笔记/读书笔记~奋斗吧，青春.md",
     "读书笔记/放下即幸福.md",
     "go语言/panic.md",
     "go语言/指针.md",
-    "go语言/运算符.md",
-    "go语言/类型.md",
-    "go语言/Go程序是怎么样的.md",
-    "读书笔记/自愈力.md"
+    "go语言/运算符.md"
   ]
 }
