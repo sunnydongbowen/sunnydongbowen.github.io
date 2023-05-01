@@ -8,7 +8,7 @@ categories : [
      "Go语言",
  ]
 ---
->💡 
+>💡 这是牛客网华为的机试题，大都是关于字符串的简单题，刷一刷还是有助于提高自己能力的。
 
 ## 1. 字符反转
 
@@ -58,7 +58,7 @@ func main() {
 }
 ```
 
-> 这段代码其实就是获取输入的方式不同，这两种获取输入的方式都要掌握！
+> 这段代码与上面的就是获取输入的方式不同，这两种获取输入的方式都要掌握！**为了统一，后面尽量用bufio里的scanner做题。**
 
 {{< /admonition >}}
 
@@ -66,11 +66,12 @@ func main() {
 
 {{< admonition type=note title="句子逆序"  >}}
 [句子逆序试题链接](https://www.nowcoder.com/practice/48b3cb4e3c694d9da5526e6255bb73c3?tpId=37&tqId=21235&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=undefined&judgeStatus=undefined&tags=&title=)
+
 将一个英文语句以单词为单位逆序排放。例如“I am a boy”，逆序排放后为“boy a am I”
 
 所有单词之间用一个空格隔开，语句中除了英文字母外，不再包含其他字符
 
-数据范围：输入的字符串长度满足 1≤�≤1000 1≤n≤1000   
+数据范围：输入的字符串长度满足  1≤n≤1000   
 
 **注意本题有多组输入**
 
@@ -97,7 +98,7 @@ func main() {
 }
 ```
 
-这是算是简单题了，但是有不少**注意点**：
+这是上上面类似，也有不少**注意点**：
 - 前面三行是标准的获取输入，这个没什么好说的，记下即可。
 - 利用strings.Fields转成切片了。i love you ->[i love you]
 - 注意for循环是倒序的，-1不要忘记了！**条件是i>=0**
@@ -112,7 +113,7 @@ fmt.Print( string(wordlist[i])+" ")
 
 ## 3. 字符集合
 
-{{< admonition type=note title="句子逆序"  >}}
+{{< admonition type=note title="字符集合"  >}}
 [字符集合试题链接](https://www.nowcoder.com/questionTerminal/784efd40ed8e465a84821c8f3970b7b5)
 
 输入一个字符串，求出该字符串包含的字符集合，按照字母输入的顺序输出。
@@ -131,7 +132,7 @@ fmt.Print( string(wordlist[i])+" ")
 
  {{< /admonition >}}
 
-{{< admonition type=example title="代码示例"  open=false  >}}
+{{< admonition type=example title="代码示例1"  open=false  >}}
 ```go
 func main() {
     for {
@@ -159,4 +160,69 @@ func main() {
 - 无限循环，其实是每一行一个循环，操作完打印换行。**换行也是一个注意点**。
 
  {{< /admonition >}}
+
+{{< admonition type=example title="代码示例2"  open=false  >}}
+下面和上面类似，只是我换了一个输入方式，也通过测试了。
+```go
+func main() {
+    scanner := bufio.NewScanner(os.Stdin)
+    for {
+        isStop := scanner.Scan()
+        if !isStop {
+            break
+        }
+        input := scanner.Text()
+        chars := make(map[rune]bool)
+        for _, ch := range input {
+            if !chars[ch] {
+                chars[ch] = true
+                fmt.Printf("%c", ch)
+            }
+        }
+        fmt.Println()
+    }
+}
+```
+
+ {{< /admonition >}}
+ 
+## 4. 统计大写字母个数
+
+{{< admonition type=note title="统计大写字母个数"  >}}
+[句子逆序试题链接](https://www.nowcoder.com/practice/434414efe5ea48e5b06ebf2b35434a9c?tpId=37&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=&judgeStatus=&tags=&title=%E5%A4%A7%E5%86%99&gioEnter=menu)
+
+找出给定字符串中大写字符(即'A'-'Z')的个数。数据范围：字符串长度：1≤∣s∣≤250 1≤∣s∣≤250 ，字符串中可能包含空格或其他字符。
+进阶：时间复杂度：O(n)  ，空间复杂度：O(n) 
+
+输入描述：对于每组样例，输入一行，代表待统计的字符串
+ 
+输出描述：输出一个整数，代表字符串中大写字母的个数
+
+
+{{< /admonition >}}
+
+{{< admonition type=example title="代码示例"    >}}
+```go
+func main() {
+    scanner := bufio.NewScanner(os.Stdin)
+    scanner.Scan()
+    input:=scanner.Text()
+    res := 0
+    for _, s := range input {
+        if string(s) >= "A" && string(s)<= "Z" {
+            res++
+        }
+    }
+    fmt.Print(res)
+}
+```
+
+这题算是简单题了，没有上一题那么坑，上一题主要包含了多行输入，多了一个无限循环。大致的思路就是
+- 利用**bufio.NewScanner**这一套获取输入输出，做完前面几道，这个应该很熟悉了吧！
+- 循环遍历，注意用的是**for range循环**
+- if判断的时候注意转一下格式
+{{< /admonition >}}
+
+
+
 

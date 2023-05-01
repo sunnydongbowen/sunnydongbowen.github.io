@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/函数学习笔记(知乎).md",
+                "file": "阅读指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "函数",
+                "query": "阅读",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -134,8 +134,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -155,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/函数学习笔记(知乎).md",
+                "file": "阅读指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/函数学习笔记(知乎).md",
+                "file": "阅读指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,16 +194,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/函数学习笔记(知乎).md"
+                "file": "阅读指南.md"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,34 +215,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9fcb9e6256791152",
+  "active": "b17623212d3f83b4",
   "lastOpenFiles": [
+    "读书笔记/读书笔记~奋斗吧，青春.md",
+    "读书笔记/读书笔记~自卑与超越.md",
+    "读书笔记/读书笔记~打理生活.md",
+    "读书笔记/读书笔记~岁月，在记忆里重逢.md",
+    "读书笔记/读书笔记~聊聊读书.md",
+    "读书笔记/读书笔记~暖暖的相伴.md",
+    "读书笔记/读书笔记~我不向这个世界俯首称臣.md",
+    "读书笔记/生命卡点.md",
+    "读书笔记/自愈力.md",
+    "阅读指南.md",
+    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "go语言/算法/Go刷算法.md",
+    "Linux云计算/vi命令学习.md",
+    "go语言/函数学习笔记(知乎).md",
     "go语言/Go语言学习之路.md",
     "go语言/map基础篇.md",
     "go语言/if语法.md",
     "go语言/Go VS Python.md",
     "go语言/Go程序是怎么样的.md",
-    "go语言/函数学习笔记(知乎).md",
-    "Linux云计算/vi命令学习.md",
     "Linux云计算/云服务器分区.md",
     "Linux云计算/文件操作.md",
     "Linux云计算/sed与awk.md",
     "Linux云计算/ansible.md",
-    "阅读指南.md",
     "聊聊那些年我折腾过的博客.md",
-    "go语言/算法/Go刷算法.md",
     "go语言/算法",
     "go语言/值recevier和指针型recevier.md",
-    "go语言/接口.md",
-    "go语言/go代码的执行顺序.md",
-    "go语言/slice基础篇.md",
-    "go语言/tony白专栏推荐的学习资源.md",
-    "读书笔记/读书笔记~被讨厌的勇气.md",
-    "go语言/学习方法篇(tony白专栏笔记).md",
-    "读书笔记/读书笔记~奋斗吧，青春.md",
-    "读书笔记/放下即幸福.md",
-    "go语言/panic.md",
-    "go语言/指针.md",
-    "go语言/运算符.md"
+    "go语言/接口.md"
   ]
 }
