@@ -173,6 +173,12 @@ Server: Docker Engine - Community
 
 可以看到，这里有docker客户端，服务端，还显示了所使用的go版本，还有guild的时间。
 
+{{< admonition type=note title=注意不同docker版本的坑   >}}
+
+我在做openstack项目中，就遇到，最后定位倒是docker用了最新的版本，最新版本把里面的一个参数去掉了，而我在脚本里写了去配置这个参数，就导致启动失败。
+在实际工作中，为了保证稳定性，避免出现一些未知的坑，尽可能选择比较常用的版本。但也不能选择过于落后的版本。
+
+{{< /admonition >}}
 # 6. 使用docker搭建nginx
 
 pull 镜像
