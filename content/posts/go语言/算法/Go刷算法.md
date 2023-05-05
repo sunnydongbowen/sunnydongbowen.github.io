@@ -62,6 +62,15 @@ func main() {
 
 {{< /admonition >}}
 
+{{< admonition type=example title="python实现"   open=false >}}
+```python
+print(input()[::-1])
+```
+
+> 一句话的事情，太简洁了！
+
+{{< /admonition >}}
+
 ## 2. 句子逆序
 
 {{< admonition type=note title="句子逆序"  >}}
@@ -185,7 +194,17 @@ func main() {
 ```
 
  {{< /admonition >}}
- 
+
+{{< admonition type=example title="python实现"  open=false  >}}
+```python
+str1= input()
+str2= input()
+for i in str2:
+    str1=str1.replace(i,"")
+print(str1)
+```
+{{< /admonition >}}
+
 ## 4. 统计大写字母个数
 
 {{< admonition type=note title="统计大写字母个数"  >}}
@@ -365,3 +384,7 @@ class Solution:
 >  这是核心模式代码，也比较简单。用python实现，后面有时间用Go试试吧。
 
 {{< /admonition >}}
+
+
+# 8. 字符串替换
+
