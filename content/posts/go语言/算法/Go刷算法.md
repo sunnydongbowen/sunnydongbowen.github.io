@@ -118,7 +118,7 @@ fmt.Print( string(wordlist[i])+" ")
 
 输入一个字符串，求出该字符串包含的字符集合，按照字母输入的顺序输出。
 
-数据范围：输入的字符串长度满足 1≤n≤100 1≤n≤100  ，且只包含大小写字母，区分大小写。  
+数据范围：输入的字符串长度满足 1≤n≤100，且只包含大小写字母，区分大小写。  
 
 **注意本题有多组输入**
 
@@ -191,13 +191,12 @@ func main() {
 {{< admonition type=note title="统计大写字母个数"  >}}
 [句子逆序试题链接](https://www.nowcoder.com/practice/434414efe5ea48e5b06ebf2b35434a9c?tpId=37&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=&judgeStatus=&tags=&title=%E5%A4%A7%E5%86%99&gioEnter=menu)
 
-找出给定字符串中大写字符(即'A'-'Z')的个数。数据范围：字符串长度：1≤∣s∣≤250 1≤∣s∣≤250 ，字符串中可能包含空格或其他字符。
+找出给定字符串中大写字符(即'A'-'Z')的个数。数据范围：字符串长度：1≤∣s∣≤250  ，字符串中可能包含空格或其他字符。
 进阶：时间复杂度：O(n)  ，空间复杂度：O(n) 
 
 输入描述：对于每组样例，输入一行，代表待统计的字符串
  
 输出描述：输出一个整数，代表字符串中大写字母的个数
-
 
 {{< /admonition >}}
 
@@ -218,11 +217,151 @@ func main() {
 ```
 
 这题算是简单题了，没有上一题那么坑，上一题主要包含了多行输入，多了一个无限循环。大致的思路就是
-- 利用**bufio.NewScanner**这一套获取输入输出，做完前面几道，这个应该很熟悉了吧！
+- 利用**bufio.NewScanner**获取输入，做完前面几道，这个应该很熟悉了吧！
 - 循环遍历，注意用的是**for range循环**
 - if判断的时候注意转一下格式
 {{< /admonition >}}
 
 
 
+## 5. 删除公共字符
+{{< admonition type=note title="需求描述"  >}}
+[试题链接](https://www.nowcoder.com/practice/f0db4c36573d459cae44ac90b90c6212?tpId=182&tqId=34789&ru=/exam/oj)
 
+输入两个字符串，从第一字符串中删除第二个字符串中所有的字符。例如，输入”They are students.”和”aeiou”，则删除之后的第一个字符串变成”Thy r stdnts.”
+输入描述：每个测试输入包含2个字符串
+ 
+输出描述：输出删除后的字符串
+
+示例1  输入：
+They are students. 
+aeiou
+输出：Thy r stdnts.
+{{< /admonition >}}
+
+{{< admonition type=example title="代码示例"    >}}
+```go
+func main() {
+    reader := bufio.NewReader(os.Stdin)
+    str1, _ := reader.ReadString('\n')
+    str2, _ := reader.ReadString('\n')
+
+    // 去除字符串中的空格和换行符
+    str1 = strings.TrimSpace(str1)
+    str2 = strings.TrimSpace(str2)
+
+    // 将str2中出现的字符从str1中删除
+    for _, c := range str2 {
+        str1 = strings.ReplaceAll(str1, string(c), "")
+    }
+    fmt.Println(str1)
+ }
+```
+
+这题获取输入的方式又变了，很灵活吧！因为这题明确了两个字符串。
+- 利用**bufio.NewReader**获取输入，这个要记下来。
+- 去掉字符串左右两边的空格，注意这个方法只去两边的。
+- 循环遍历str2，注意用的是**for range循环**，然后使用ReplaceAll方法，用空格替换掉。
+{{< /admonition >}}
+
+## 6. 替换字符
+
+{{< admonition type=note title="需求描述"  >}}
+[试题链接ACM模式](https://www.nowcoder.com/questionTerminal/c010f5a2cfad400183982dee1550815f)              [试题链接(核心模式)](https://www.nowcoder.com/practice/0e26e5551f2b489b9f58bc83aa4b6c68?tpId=13&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=&judgeStatus=&tags=&title=%E7%A9%BA%E6%A0%BC&gioEnter=menu)
+
+请实现一个函数，将一个字符串s中的每个空格替换成“%20”。
+例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
+
+输入："We Are Happy"   返回值："We%20Are%20Happy"
+输入：" "                         返回值： "%20"
+{{< /admonition >}}
+
+{{< admonition type=example title="ACM模式代码示例"    >}}
+```go
+func main() {
+    reader := bufio.NewReader(os.Stdin)
+    var res string
+    s, _ := reader.ReadString('\n')
+    for i := 0; i < len(s); i++ {
+        if s[i] == ' ' {
+            res += "%100"
+        } else {
+            res += string(s[i])
+        }
+    }
+    fmt.Print(res)  
+}
+```
+
+这题沿用了上一题的输入方式，还是比较简单的。
+- 利用**bufio.NewReader**获取输入，这个要记下来；
+- 核心逻辑，依然是遍历，是就替换，不是就拼接；
+- 拼接的时候用的是res，不是s。也要用string()转一下的
+{{< /admonition >}}
+
+{{< admonition type=example title="核心代码示例"    >}}
+```go
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ * @param s string字符串
+ * @return string字符串
+ */
+func replaceSpace(s string) string {
+    var res string
+    for i := 0; i < len(s); i++ {
+        if s[i] == ' ' {
+            res += "%20"
+        } else {
+            res += string(s[i])
+        }
+    }
+    return res
+}
+```
+
+>  这题是核心模式的代码，是不需要写main函数的，人家上面也写的很清楚了。与ACM模式需要自己写输入输出的代码不同，核心模式只需要按照规定写返回值即可，**核心模式更简单**，因为输入输出人家都帮我们规定好了。只要记住核心实现逻辑，去写就可以了。不要去纠结这些东西。
+
+{{< /admonition >}}
+
+## 7. 大数加法
+
+{{< admonition type=note title="需求描述"  >}}
+[试题链接ACM模式](https://www.nowcoder.com/questionTerminal/1ac1af77536b4917aedaac4746eeb808)              [试题链接(核心模式)](https://www.nowcoder.com/practice/11ae12e8c6fe48f883cad618c2e81475?tpId=196&tqId=37176&ru=/exam/oj)
+
+以字符串的形式读入两个数字，再以字符串的形式输出两个数字的和。
+
+输入：输入两行，表示两个数字a和b，-109 <= a , b <= 109  ，用双引号括起。
+输出：输出a+b的值，用双引号括起。
+{{< /admonition >}}
+
+{{< admonition type=example title="ACM模式"    >}}
+```python
+import sys
+m = int(input()[1:-1])
+n = int(input()[1:-1])
+print('"'+str(m+n)+'"')
+```
+
+> 这题用python三行代码搞定了。我看了其他语言，一大堆我看都不想看。pythony依旧是如此强大！
+
+{{< /admonition >}}
+
+{{< admonition type=example title="核心模式"    >}}
+```python
+# 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+# 计算两个数之和
+# @param s string字符串 表示第一个整数
+# @param t string字符串 表示第二个整数
+# @return string字符串
+class Solution:
+    def solve(self , s: str, t: str) -> int:
+        # write code here
+        a=int(s)
+        b=int(t)
+        c=a+b
+        return c
+```
+
+>  这是核心模式代码，也比较简单。用python实现，后面有时间用Go试试吧。
+
+{{< /admonition >}}
