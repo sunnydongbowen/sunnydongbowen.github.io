@@ -10,7 +10,7 @@ categories : [
      "Linux云计算",
  ]
 ---
->这篇文章依旧是我看[B站上的视频13~20](https://www.bilibili.com/video/BV1DT411U7v1?p=14&vd_source=4c2c9caf33151d42ae4b296d7b5f6f45)摘录的笔记。主。要是docker镜像相关的内容。
+>这篇文章依旧是我看[B站上的视频](https://www.bilibili.com/video/BV1DT411U7v1?p=14&vd_source=4c2c9caf33151d42ae4b296d7b5f6f45)摘录的笔记。主要是docker容器相关的内容。
 
 # 1. 启动容器玩法
 
@@ -99,7 +99,7 @@ PING www.a.shifen.com (180.101.50.188) 56(84) bytes of data.
 64 bytes from 180.101.50.188 (180.101.50.188): icmp_seq=4 ttl=127 time=10.2 ms
 ```
 
-> 这个在定位容器启动失败的时候会用到，我在openstack中遇到horizon容器起不来，就是用的这个命令查看日志报错，报错信息会给我们破案提供一定的参考。
+> 这个在定位容器启动失败时会用到，我在openstack中遇到horizon容器起不来，就是用的这个命令查看日志报错，报错信息会给我们破案提供一定的参考。
 
 
 # 3. 进入容器
@@ -126,15 +126,9 @@ docker container inspect python
 > 这条命令和查看镜像信息类似的，也是一个json格式的，存放了容器的所有信息。
 
 
-
- >只有当需要修改时才复制一份数据，这种特性被称作 **Copy-on-Write**。可见，容器层保存的是镜像变化的部分，不会对镜像本身进行任何修改。这样就解释了我们前面提出的问题: 容器层记录对镜像的修改，所有镜像层都是只读的，不会被容器修改所以镜像可以被多个容器共享。
-
-docker镜像分层管理的方式大大便捷了Docker镇像的分发和存储。Docker hub是为全世界的仓库。 Docker镇像代表一个容器的文件系统内容 。镜像层级技术属于 **联合文件系统** 。容器是一个动态的环境，每一层镜像里的文件都属于静态内容。dockerfile里的ENV、VOLUME、CMD等内容都会落实到容器环境里。
-
-
 # 5. 基于容器commit新镜像
 
-启动centos容器，在里面修改yum源，安装vim命令，然后提交，**前面是容器名，后面是镜像名。**
+启动centos容器，我在里面修改yum源，安装vim等命令；然后提交，**前面是容器名，后面是镜像名。
 
 ```bash
 docker commit e8c702290e7b bowen/centos8.4
