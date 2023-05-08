@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/算法/Go刷算法.md",
+                "file": "Linux云计算/docker/docker镜像.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "inspect",
+                "query": "tag:#小结",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/算法/Go刷算法.md",
+                "file": "Linux云计算/docker/docker镜像.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/算法/Go刷算法.md",
+                "file": "Linux云计算/docker/docker镜像.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/算法/Go刷算法.md"
+                "file": "Linux云计算/docker/docker镜像.md"
               }
             }
           },
@@ -199,7 +199,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -217,6 +217,8 @@
   },
   "active": "ac0166c28770d02c",
   "lastOpenFiles": [
+    "go语言/context进阶篇.md",
+    "go语言/算法/Go刷算法.md",
     "Linux云计算/docker/docker容器管理.md",
     "Linux云计算/docker/docker镜像.md",
     "Linux云计算/docker/docker初始.md",
@@ -243,8 +245,6 @@
     "读书笔记/每天5分钟玩转OpenStack.md",
     "读书笔记/跟老男孩学Linux运维：Shell编程实战.md",
     "读书笔记/极简学习法.md",
-    "读书笔记/调情学.md",
-    "读书笔记/爱情心理学.md",
     "go语言/算法"
   ]
 }
