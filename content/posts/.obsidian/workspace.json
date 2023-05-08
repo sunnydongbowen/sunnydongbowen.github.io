@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/docker/docker初始.md",
+                "file": "Linux云计算/docker/认识docker和虚拟化.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/docker/docker容器管理.md",
+                "file": "Linux云计算/docker/认识docker和虚拟化.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/docker/docker容器管理.md",
+                "file": "Linux云计算/docker/认识docker和虚拟化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/docker/docker容器管理.md",
+                "file": "Linux云计算/docker/认识docker和虚拟化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/docker/docker容器管理.md"
+                "file": "Linux云计算/docker/认识docker和虚拟化.md"
               }
             }
           },
@@ -217,11 +217,11 @@
   },
   "active": "ac0166c28770d02c",
   "lastOpenFiles": [
+    "Linux云计算/docker/docker容器管理.md",
     "Linux云计算/docker/docker镜像.md",
     "go语言/context进阶篇.md",
     "go语言/算法/Go刷算法.md",
-    "Linux云计算/docker/docker容器管理.md",
-    "Linux云计算/docker/docker初始.md",
+    "Linux云计算/docker/认识docker和虚拟化.md",
     "Linux云计算/docker/image",
     "Linux云计算/那些年，我搭过的环境.md",
     "Linux云计算/常用的网络协议.md",
