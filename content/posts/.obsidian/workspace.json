@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/那些年，我搭过的环境.md",
+                "file": "go语言/go基础语法/const.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/那些年，我搭过的环境.md",
+                "file": "go语言/go基础语法/const.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/那些年，我搭过的环境.md",
+                "file": "go语言/go基础语法/const.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/那些年，我搭过的环境.md"
+                "file": "go语言/go基础语法/const.md"
               }
             }
           },
@@ -199,7 +199,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -215,15 +215,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac0166c28770d02c",
+  "active": "30389e5e365acefa",
   "lastOpenFiles": [
+    "go语言/context基础篇.md",
+    "Linux云计算/那些年，我搭过的环境.md",
+    "go语言/go基础语法",
     "Linux云计算/docker/认识docker和虚拟化.md",
     "Linux云计算/docker/docker容器管理.md",
     "Linux云计算/docker/docker镜像.md",
     "go语言/context进阶篇.md",
     "go语言/算法/Go刷算法.md",
     "Linux云计算/docker/image",
-    "Linux云计算/那些年，我搭过的环境.md",
     "Linux云计算/常用的网络协议.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "阅读指南.md",
@@ -244,7 +246,6 @@
     "读书笔记/人类简史：从动物到上帝.md",
     "读书笔记/每天5分钟玩转OpenStack.md",
     "读书笔记/跟老男孩学Linux运维：Shell编程实战.md",
-    "读书笔记/极简学习法.md",
     "go语言/算法"
   ]
 }
