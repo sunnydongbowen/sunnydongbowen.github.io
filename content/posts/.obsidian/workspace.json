@@ -56,7 +56,31 @@
             }
           },
           {
-            "id": "70bbfc89f5feabfb",
+            "id": "ac0166c28770d02c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/算法/华为外包机考.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4b81d48b23251d49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/算法/关于算法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4408b7b3eef1f9bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -68,19 +92,43 @@
             }
           },
           {
-            "id": "ac0166c28770d02c",
+            "id": "30f826b8d3d6551a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go语言/go基础语法/const.md",
+                "file": "Linux云计算/docker/使用docker部署网站.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "81bd60588ec2444d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux云计算/docker/回顾.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9c0512d7a7009832",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -146,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go语言/go基础语法/const.md",
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +211,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go语言/go基础语法/const.md",
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +234,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go语言/go基础语法/const.md"
+                "file": "读书笔记/以幽默的方式过一生.md"
               }
             }
           },
@@ -215,16 +263,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30389e5e365acefa",
+  "active": "9c0512d7a7009832",
   "lastOpenFiles": [
+    "读书笔记/自愈力.md",
+    "读书笔记/以幽默的方式过一生.md",
+    "读书笔记/生命卡点.md",
+    "Linux云计算/docker/回顾.md",
+    "Linux云计算/docker/docker容器管理.md",
+    "Linux云计算/docker/docker镜像.md",
+    "Linux云计算/docker/使用docker部署网站.md",
+    "Linux云计算/docker/认识docker和虚拟化.md",
+    "Linux云计算/docker/dockerfile.md",
+    "Linux云计算/docker/回顾",
+    "go语言/算法/关于算法.md",
+    "go语言/算法/华为外包机考.md",
+    "个人随笔",
+    "go语言/go基础语法/const.md",
     "go语言/context基础篇.md",
     "Linux云计算/那些年，我搭过的环境.md",
     "go语言/go基础语法",
-    "Linux云计算/docker/认识docker和虚拟化.md",
-    "Linux云计算/docker/docker容器管理.md",
-    "Linux云计算/docker/docker镜像.md",
     "go语言/context进阶篇.md",
-    "go语言/算法/Go刷算法.md",
     "Linux云计算/docker/image",
     "Linux云计算/常用的网络协议.md",
     "python/py~聊聊Python在我工作中的应用.md",
@@ -233,19 +291,11 @@
     "Linux云计算/docker",
     "go语言/Go语言学习之路.md",
     "Linux云计算/ansible.md",
-    "读书笔记/自愈力.md",
-    "读书笔记/生命卡点.md",
     "读书笔记/放下即幸福.md",
     "读书笔记/对比Excel，轻松学习Python数据分析（入职数据分析师系列）.md",
     "读书笔记/心：稻盛和夫的一生嘱托（独家首发）.md",
     "读书笔记/一切都是最好的安排2.md",
     "读书笔记/心理学与生活.md",
-    "读书笔记/写给最好的自己：成功改变命运的22堂课.md",
-    "读书笔记/自律力+极简力（套装）.md",
-    "读书笔记/食物搭配与饮食宜忌全书.md",
-    "读书笔记/人类简史：从动物到上帝.md",
-    "读书笔记/每天5分钟玩转OpenStack.md",
-    "读书笔记/跟老男孩学Linux运维：Shell编程实战.md",
     "go语言/算法"
   ]
 }

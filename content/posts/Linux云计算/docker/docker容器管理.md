@@ -128,7 +128,7 @@ docker container inspect python
 
 # 5. 基于容器commit新镜像
 
-启动centos容器，我在里面修改yum源，安装vim等命令；然后提交，**前面是容器名，后面是镜像名。
+启动centos容器，我在里面修改yum源，安装vim等命令；然后提交，**前面是容器名，后面是镜像名。**
 
 ```bash
 docker commit e8c702290e7b bowen/centos8.4

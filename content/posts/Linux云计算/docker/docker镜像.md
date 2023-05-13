@@ -12,7 +12,7 @@ categories : [
 ---
 >这篇文章依旧是我看[B站上的视频13~20](https://www.bilibili.com/video/BV1DT411U7v1?p=14&vd_source=4c2c9caf33151d42ae4b296d7b5f6f45)摘录的笔记。主要是docker镜像相关的内容。
 
-# 1.分层原理
+# 1. 分层原理
 
 ![](/docker/20230503175626.png)
 
