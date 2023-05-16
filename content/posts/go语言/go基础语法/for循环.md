@@ -206,6 +206,7 @@ for i, v := range s {
 我们看到：for range 对于 string 类型来说，每次循环得到的 v 值是一个 Unicode 字符码点，也就是 rune 类型值，而不是一个字节，返回的第一个值 i 为该 Unicode 字符码点的内存编码（UTF-8）的第一个字节在字符串内存序列中的位置。
 
 可以看到，这个就和切片类型的不同了，首先下标i的不同，第二个，值v的不同。另外我要在这里再次提醒你，使用 for 经典形式与使用 for range 形式，对 string 类型进行循环操作的语义是不同的。
+[[华为外包机考]]  这里面很多都是关于字符串操作的，都需要转一下。
 
 ## 5. for range遍历map类型 😀
 
@@ -220,9 +221,9 @@ var m = map[string]int{
 		"John": 29,
 	}
 
-	for k, v := range m {
-		fmt.Println(k, v)
-	}
+for k, v := range m {
+	fmt.Println(k, v)
+}
 ```
 
 `out`
@@ -234,6 +235,7 @@ Russ 39
 ```
 
 通过输出结果我们看到：for range 对于 map 类型来说，每次循环，循环变量 k 和 v 分别会被赋值为 map 键值对集合中一个元素的 key 值和 value 值。而且，map 类型中没有下标的概念，通过 key 和 value 来循环操作 map 类型变量也就十分自然了。
+[[map基础篇#9. 对map按照key排序]]
 
 ## 6. for range 遍历channel 😀
 
