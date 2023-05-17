@@ -119,7 +119,7 @@ replace [github.com/user/repo](http://github.com/user/repo) v1.0.0 => module b�
 {{< admonition type=question title="问题2"    >}} 
 >如果 **路径和包名**不一样， `path: apath`, `package: apack`   那么使用的时候是这样吗？` import "apath"`  ` apack.Print()`
 
-这个是对的！但一般不这样用，一般都是一致的。
+这个是对的！但一般不这样用，一般都是一致的。import的是路径，而package 声明的是包名，二者是可以不一样的。
 {{< /admonition >}}
 
 {{< admonition type=question title="问题3"    >}} 

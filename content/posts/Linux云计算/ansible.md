@@ -83,7 +83,7 @@ ansible -i /root/deploy.ini no_deploy -m copy -a "src=deploynode.py  dest=/root"
 
 # 5. 小结
 
->  ansible 在批量管理主机的时候还是相当有用的。我目前只用到了下面两种来辅助我的大规模部署。
+>  ansible 在批量管理主机的时候还是相当有用的。我目前只用到了下面两种来辅助我的大规模部署。就这两个已经十分强大了。但有些功能它也无法实现，就需要自己写脚本了。例如我在项目中利用paramiko模块，subprocess模块实现的批量登录，传输，启链接，自动化部署等等。
 
 - 批量传输文件
 - 批量执行命令
