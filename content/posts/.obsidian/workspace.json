@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/自愈力.md",
+                "file": "个人随笔/聊聊目前国内的互联网环境.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03ca4f647a068feb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go语言/索引.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -28,6 +41,7 @@
               "state": {
                 "file": "Linux云计算/docker/回顾.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -61,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#网络",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -75,6 +89,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "e7a32416c8b333d4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -98,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/自愈力.md",
+                "file": "个人随笔/聊聊目前国内的互联网环境.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/自愈力.md",
+                "file": "个人随笔/聊聊目前国内的互联网环境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/自愈力.md"
+                "file": "个人随笔/聊聊目前国内的互联网环境.md"
               }
             }
           },
@@ -151,7 +173,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -169,33 +191,33 @@
   },
   "active": "c974f87d286695ed",
   "lastOpenFiles": [
-    "读书笔记/读书笔记~聊聊读书.md",
+    "go语言/go基础语法/函数学习笔记(知乎).md",
+    "go语言/go web/gin文件上传.md",
+    "go语言/索引.md",
+    "go语言/go基础语法/函数基础篇.md",
+    "go语言/go基础语法/值recevier和指针型recevier.md",
+    "go语言/go基础语法/swtich-case.md",
+    "go语言/go基础语法/panic.md",
+    "go语言/go基础语法/slice基础篇.md",
+    "go语言/go基础语法/map基础篇.md",
+    "go语言/go基础语法/Go程序是怎么样的.md",
+    "go语言/go基础语法/Go VS Python.md",
+    "go语言/go web/《汪明Go并发编程实战》http.md",
+    "go语言/go web/《汪明Go并发编程实战》https.md",
+    "go语言/go web/gin的redirect.md",
+    "go语言/go web/gin路由.md",
+    "go语言/go web/gin示例及restfulAPI.md",
+    "go语言/go web/gin的middleware.md",
+    "go语言/go web/gin~session.md",
     "读书笔记/自愈力.md",
+    "读书笔记/读书笔记~聊聊读书.md",
     "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/读书笔记~我不向这个世界俯首称臣.md",
     "读书笔记/生命卡点.md",
     "读书笔记/以幽默的方式过一生.md",
     "读书笔记/读书笔记~生命重于泰山.md",
     "读书笔记/放下即幸福.md",
-    "读书笔记/读书笔记~自卑与超越.md",
-    "读书笔记/读书笔记~被讨厌的勇气.md",
-    "读书笔记/读书笔记~俞敏洪演讲.md",
-    "读书笔记/读书笔记~岁月，在记忆里重逢.md",
-    "读书笔记/读书笔记~思考的整理学.md",
-    "读书笔记/读书笔记~打理生活.md",
-    "go语言/go基础语法/学习方法篇(tony白专栏笔记).md",
-    "go语言/Go语言学习之路.md",
-    "个人随笔/聊聊那些年我折腾过的博客.md",
-    "Linux云计算/docker/dockerfile.md",
-    "Linux云计算/docker/docker镜像.md",
-    "go语言/go基础语法/Go module初步.md",
-    "go语言/go基础语法/值recevier和指针型recevier.md",
-    "go语言/go基础语法/Go module 详细.md",
     "Untitled.canvas",
-    "个人随笔/聊聊我折腾过的笔记软件.md",
-    "2023-05-17.md",
-    "go语言/go基础语法/tony白专栏推荐的学习资源.md",
-    "go语言/go基础语法/学习资源(个人).md",
     "Linux云计算/docker/回顾",
     "个人随笔",
     "go语言/go基础语法",

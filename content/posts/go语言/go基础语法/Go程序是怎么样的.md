@@ -71,7 +71,7 @@ fmt.Println("hello, world")
 在 main 函数体中，通过 fmt 这个限定标识符（Qualified Identifier）调用 Println 函数。虽然两处都使用了“fmt”这个字面值，但在这两处“fmt”字面值所代表的含义却是不一样的：
 
 -   import “fmt” 一行中“fmt”代表的是包的**导入路径（Import）**，它表示的是标准库下的 fmt 目录，整个 import 声明语句的含义是导入标准库 fmt 目录下的包；
--   fmt.Println 函数调用一行中的“fmt”代表的则是**包名**。
+-   fmt.Println 函数调用一行中的“fmt”代表的则是**包名**。[[Go module初步#3. 几个不错的问题]]
 
 >通常导入路径的最后一个分段名与包名是相同的，这也很容易让人误解 import 声明语句中的“fmt”指的是包名，其实并不是这样的,不一定是包名，这两个名称有可能不一样的。
 
