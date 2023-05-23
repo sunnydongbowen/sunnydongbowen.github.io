@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
+                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
+                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
+                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md"
+                "file": "个人随笔/聊聊那些年我折腾过的博客.md"
               }
             }
           },
@@ -191,6 +191,7 @@
   },
   "active": "c974f87d286695ed",
   "lastOpenFiles": [
+    "个人随笔/聊聊我折腾过的笔记软件.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
     "go语言/go基础语法/函数学习笔记(知乎).md",
     "go语言/go web/gin文件上传.md",
@@ -216,7 +217,6 @@
     "读书笔记/读书笔记~我不向这个世界俯首称臣.md",
     "读书笔记/生命卡点.md",
     "读书笔记/以幽默的方式过一生.md",
-    "读书笔记/读书笔记~生命重于泰山.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
