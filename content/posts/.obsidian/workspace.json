@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "d4ce0c8279a9bfdd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/py文件操作的妙用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "03ca4f647a068feb",
             "type": "leaf",
             "state": {
@@ -46,7 +59,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
+                "file": "python/py文件操作的妙用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
+                "file": "python/py文件操作的妙用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "个人随笔/聊聊我折腾过的笔记软件.md"
+                "file": "python/py文件操作的妙用.md"
               }
             }
           },
@@ -189,11 +203,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c974f87d286695ed",
+  "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "个人随笔/聊聊我折腾过的笔记软件.md",
+    "python/py文件操作的妙用.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
     "个人随笔/聊聊那些年我折腾过的博客.md",
-    "个人随笔/聊聊我折腾过的笔记软件.md",
     "go语言/go基础语法/函数学习笔记(知乎).md",
     "go语言/go web/gin文件上传.md",
     "go语言/索引.md",
@@ -216,7 +231,6 @@
     "读书笔记/读书笔记~聊聊读书.md",
     "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/读书笔记~我不向这个世界俯首称臣.md",
-    "读书笔记/生命卡点.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
