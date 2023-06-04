@@ -131,10 +131,110 @@ print(fileName)
 
 ![](/python/20230529153725.png)
 
+## 新增需求1
+除了上面**去掉download下来的id**，**插入文件标识外**。后面整理过程中又增加了几个需求。例如**修改文件名，日记全部按照年月日排名**，每一天都是独一无二的。而不是重复，不是去年今天的重复，也不是上个月今天的重复。我发现去年写的日记看起来多，事实上都是重复性内容。而且我搜索起来不能一眼看到具体是什么时候。这个时候就有了这个需求。实现效果如下。
+
+![](/python/20230531113841.png)
+
+这个需求是在上面两个基础上稍微做了一些修改就可以了。
+```python
+import  os  
+  
+foldler_path = r'C:\Users\sunnydongbowen\Desktop\mon007days'  
+folder_path2 = r'C:\Users\sunnydongbowen\Desktop\M0062'  
+filenames = os.listdir(foldler_path)  
+print(filenames)  
+  
+newfilenames=[]  
+for file in filenames:  
+    file='2022-07-'+file  
+    newfilenames.append(file)  
+print(newfilenames)  
+  
+  
+for file, newfile in zip(filenames, newfilenames):  
+    count=0  
+    file = foldler_path +"\ " +file  
+    file = file.replace(' ', '', 1)  
+    #print(file)  
+  
+    newfile = folder_path2 + "\ " + newfile  
+    newfile = newfile.replace(' ', '', 1)  
+    #print(newfile)  
+  
+    pathf = os.path.dirname(newfile)  
+    fileName = newfile[len(pathf) + 1:]  
+    print(fileName)  
+    #fileName = fileName[:-36]  
+    #print(fileName)  
+    with open(file, encoding='utf-8') as f, open(newfile, 'w', encoding='utf-8') as f1:  
+        for line in f:  
+            if count == 0:  
+                line = '---\n'  
+            if count == 1:  
+                line = '身体:  "[[{}#身体]]"\n'.format(fileName)  
+            if count == 2:  
+                line = '饮食:  "[[{}#生活]]"\n'.format(fileName)  
+            if count == 3:  
+                line = '学习: "[[{}#学习]]"\n'.format(fileName)  
+            if count == 4:  
+                line = '杂记:  "[[{}#杂想]]"\n'.format(fileName)  
+            if count == 5:  
+                line = '特殊的事情: " "\n'  
+            if count == 6:  
+                line = '---\n'  
+            # 写文件  
+            f1.write(line)  
+            count = count + 1
+```
+
+## 新增需求2
+我从notion下载了12月份的日记，发现它每个文件名是这样的：
+
+![](/python/20230531175239.png)
+
+而我理想中是这样的:
+
+![](/python/20230531175359.png)
+
+代码实现：
+```python
+# 12月日记处理  
+  
+import  os  
+foldler_path = r'C:\Users\sunnydongbowen\Desktop\1222'  
+folder_path2 = r'C:\Users\sunnydongbowen\Desktop\M0062'  
+filenames = os.listdir(foldler_path)  
+print(filenames)  
+  
+newfilenames=[]  
+for filename in filenames:  
+    filename=filename[:-36] + '.md'  
+    filename=filename.replace(" ","-",2)  
+    filename=foldler_path+"\ "+filename  
+    filename = filename.replace(" ", "", 1)  
+    newfilenames.append(filename)  
+  
+filenames_old=[]  
+  
+for filename in filenames:  
+    filename = foldler_path + "\ " + filename  
+    filename = filename.replace(" ", "", 1)  
+    filenames_old.append(filename)  
+  
+print(filenames_old)  
+  
+for  filename,newfilename  in zip(filenames_old,newfilenames):  
+    os.rename(filename,newfilename)
+```
+
+这么一小段代码，就帮我省去了很大的繁琐操作，不然我还要手动一点点修改。而且后面几个月的日记都是这样排列的，有了这个demo，就可以很快实现我想要的效果了。
+这个需求的实现比上面的还简单一些。上面涉及到了读写文件，而这里只是修改了文件名。
 
 ## 编程随想
 ---
 这是在我整理日记中无意间发现的需求，一开始我觉得手动整理不就得了。干嘛花这个时间去调试脚本。直到今天上午我用脚本整理7月份日记时，体会到了乐趣。全部自动化完成，快到起飞！我才抽出时间来做其他事情。不然下午也不会有时间写这篇blog。
 1. 这次完成了小需求，下次遇到类似的，是不是就可以很快写出来了。别人如果有类似的需求，是不是也可借鉴一下？这个时间投入是值得的。就如同做自动化一样。
-2. 当遇到批量但是又有规律的任务，重复性的任务。要想到用python实现自动化，这会帮我节省时间，减少重复性劳动。事实上，我之前在工作中[[py~聊聊Python在我工作中的应用]]  写的所有自动化脚本，基本上都有这几个特点: 重复性高；有一定规律；数据量大；遇到这几个特点时，要想到去利用python脚本来实现自动化，这个时间绝对是值得的。
+2. 当遇到批量但是又有规律的任务，重复性的任务。要想到用python实现自动化，这会帮我节省时间，减少重复性劳动。事实上，我之前在工作中[[py~聊聊Python在我工作中的应用]]  写的所有自动化脚本，基本上都有这几个特点:  **重复性高；有一定规律；数据量大**；遇到这几个特点时，要想到去利用python脚本来实现自动化，这个时间绝对是值得的。
 3. python在自动化和数据分析方面十分强大，而且应用十分广泛。基本上能想到的需求都可以用它来做。
+4. 这套整理日记中发现的小需求，也挺有意思的。有了基础代码，一步步修改迭代满足我的需求，实现我想要的效果。有点类似实际开发中的过程了。
