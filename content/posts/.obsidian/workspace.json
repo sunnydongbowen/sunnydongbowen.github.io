@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/py文件操作的妙用.md",
+                "file": "go语言/索引.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python/py文件操作的妙用.md",
+                "file": "go语言/索引.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python/py文件操作的妙用.md",
+                "file": "go语言/索引.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python/py文件操作的妙用.md"
+                "file": "go语言/索引.md"
               }
             }
           },
@@ -205,8 +205,10 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
-    "python/py~聊聊Python在我工作中的应用.md",
+    "go语言/Go语言学习之路.md",
+    "go语言/算法/关于算法.md",
     "python/py文件操作的妙用.md",
+    "python/py~聊聊Python在我工作中的应用.md",
     "个人随笔/聊聊我折腾过的笔记软件.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
     "个人随笔/聊聊那些年我折腾过的博客.md",
@@ -229,8 +231,6 @@
     "go语言/go web/gin的middleware.md",
     "go语言/go web/gin~session.md",
     "读书笔记/自愈力.md",
-    "读书笔记/读书笔记~聊聊读书.md",
-    "读书笔记/读书笔记~暖暖的相伴.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
