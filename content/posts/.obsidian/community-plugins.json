@@ -1,4 +1,6 @@
 [
   "calendar",
-  "editing-toolbar"
+  "editing-toolbar",
+  "highlightr-plugin",
+  "obsidian-admonition"
 ]
