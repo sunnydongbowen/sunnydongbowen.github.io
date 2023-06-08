@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/读书笔记~暖暖的相伴.md",
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/读书笔记~暖暖的相伴.md",
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/读书笔记~暖暖的相伴.md",
+                "file": "读书笔记/以幽默的方式过一生.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/读书笔记~暖暖的相伴.md"
+                "file": "读书笔记/以幽默的方式过一生.md"
               }
             }
           },
@@ -205,6 +205,7 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/生命卡点.md",
     "读书笔记/读书笔记~俞敏洪演讲.md",
     "读书笔记/自愈力.md",
@@ -230,7 +231,6 @@
     "go语言/go基础语法/Go VS Python.md",
     "go语言/go web/《汪明Go并发编程实战》http.md",
     "go语言/go web/《汪明Go并发编程实战》https.md",
-    "go语言/go web/gin的redirect.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
