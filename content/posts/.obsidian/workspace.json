@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "读书笔记/读书笔记~暖暖的相伴.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "读书笔记/读书笔记~暖暖的相伴.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "读书笔记/读书笔记~暖暖的相伴.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md"
+                "file": "读书笔记/读书笔记~暖暖的相伴.md"
               }
             }
           },
@@ -205,6 +205,11 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "读书笔记/生命卡点.md",
+    "读书笔记/读书笔记~俞敏洪演讲.md",
+    "读书笔记/自愈力.md",
+    "go语言/并发编程进阶篇.md",
+    "个人随笔/聊聊那些年我折腾过的博客.md",
     "个人随笔/聊聊我折腾过的笔记软件.md",
     "个人随笔/阅读指南.md",
     "go语言/索引.md",
@@ -213,7 +218,6 @@
     "python/py文件操作的妙用.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
-    "个人随笔/聊聊那些年我折腾过的博客.md",
     "go语言/go基础语法/函数学习笔记(知乎).md",
     "go语言/go web/gin文件上传.md",
     "go语言/go基础语法/函数基础篇.md",
@@ -227,10 +231,6 @@
     "go语言/go web/《汪明Go并发编程实战》http.md",
     "go语言/go web/《汪明Go并发编程实战》https.md",
     "go语言/go web/gin的redirect.md",
-    "go语言/go web/gin路由.md",
-    "go语言/go web/gin示例及restfulAPI.md",
-    "go语言/go web/gin的middleware.md",
-    "go语言/go web/gin~session.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
