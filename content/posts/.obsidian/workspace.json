@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/以幽默的方式过一生.md",
+                "file": "读书笔记/刘强东牛津演讲.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bil",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/以幽默的方式过一生.md",
+                "file": "读书笔记/刘强东牛津演讲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/以幽默的方式过一生.md",
+                "file": "读书笔记/刘强东牛津演讲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/以幽默的方式过一生.md"
+                "file": "读书笔记/刘强东牛津演讲.md"
               }
             }
           },
@@ -205,8 +205,16 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
-    "读书笔记/读书笔记~暖暖的相伴.md",
+    "读书笔记/放下即幸福.md",
     "读书笔记/生命卡点.md",
+    "读书笔记/刘强东牛津演讲.md",
+    "读书笔记/读书笔记~聊聊读书.md",
+    "go语言/算法/关于算法.md",
+    "Linux云计算/docker/回顾.md",
+    "Linux云计算/docker/认识docker和虚拟化.md",
+    "Linux云计算/docker/docker镜像.md",
+    "读书笔记/以幽默的方式过一生.md",
+    "读书笔记/读书笔记~暖暖的相伴.md",
     "读书笔记/读书笔记~俞敏洪演讲.md",
     "读书笔记/自愈力.md",
     "go语言/并发编程进阶篇.md",
@@ -215,7 +223,6 @@
     "个人随笔/阅读指南.md",
     "go语言/索引.md",
     "go语言/Go语言学习之路.md",
-    "go语言/算法/关于算法.md",
     "python/py文件操作的妙用.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
@@ -224,13 +231,6 @@
     "go语言/go基础语法/函数基础篇.md",
     "go语言/go基础语法/值recevier和指针型recevier.md",
     "go语言/go基础语法/swtich-case.md",
-    "go语言/go基础语法/panic.md",
-    "go语言/go基础语法/slice基础篇.md",
-    "go语言/go基础语法/map基础篇.md",
-    "go语言/go基础语法/Go程序是怎么样的.md",
-    "go语言/go基础语法/Go VS Python.md",
-    "go语言/go web/《汪明Go并发编程实战》http.md",
-    "go语言/go web/《汪明Go并发编程实战》https.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
