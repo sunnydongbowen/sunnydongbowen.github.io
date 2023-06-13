@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/openstack vs  k8s.md",
+                "file": "Linux云计算/解决VMware centos8 网络问题.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/openstack vs  k8s.md",
+                "file": "Linux云计算/解决VMware centos8 网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/openstack vs  k8s.md",
+                "file": "Linux云计算/解决VMware centos8 网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/openstack vs  k8s.md"
+                "file": "Linux云计算/解决VMware centos8 网络问题.md"
               }
             }
           },
@@ -205,10 +205,13 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
-    "Linux云计算/文件操作.md",
-    "Linux云计算/openstack vs  k8s.md",
-    "go语言/流媒体/第一章  项目介绍.md",
+    "python/py~聊聊Python在我工作中的应用.md",
     "go语言/流媒体/第二章  复习go工具链.md",
+    "Linux云计算/解决VMware centos8 网络问题.md",
+    "go语言/流媒体/第一章  项目介绍.md",
+    "Linux云计算/常用的网络协议.md",
+    "Linux云计算/openstack vs  k8s.md",
+    "Linux云计算/文件操作.md",
     "go语言/算法/关于算法.md",
     "读书笔记/刘强东牛津演讲.md",
     "go语言/流媒体",
@@ -229,9 +232,6 @@
     "go语言/索引.md",
     "go语言/Go语言学习之路.md",
     "python/py文件操作的妙用.md",
-    "python/py~聊聊Python在我工作中的应用.md",
-    "个人随笔/聊聊目前国内的互联网环境.md",
-    "go语言/go基础语法/函数学习笔记(知乎).md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
