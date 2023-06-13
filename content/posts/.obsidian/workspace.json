@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "博客",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -114,8 +114,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -135,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md",
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "个人随笔/聊聊那些年我折腾过的博客.md"
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md"
               }
             }
           },
@@ -206,6 +205,10 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "Linux云计算/那些年，我搭过的环境.md",
+    "个人随笔/阅读指南.md",
+    "个人随笔/聊聊我折腾过的笔记软件.md",
+    "个人随笔/聊聊那些年我折腾过的博客.md",
     "Linux云计算/解决VMware centos8 网络问题.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "go语言/流媒体/第二章  复习go工具链.md",
@@ -227,12 +230,8 @@
     "读书笔记/读书笔记~俞敏洪演讲.md",
     "读书笔记/自愈力.md",
     "go语言/并发编程进阶篇.md",
-    "个人随笔/聊聊那些年我折腾过的博客.md",
-    "个人随笔/聊聊我折腾过的笔记软件.md",
-    "个人随笔/阅读指南.md",
     "go语言/索引.md",
     "go语言/Go语言学习之路.md",
-    "python/py文件操作的妙用.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
