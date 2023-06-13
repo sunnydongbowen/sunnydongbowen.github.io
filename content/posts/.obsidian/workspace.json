@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/刘强东牛津演讲.md",
+                "file": "Linux云计算/openstack vs  k8s.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书笔记/刘强东牛津演讲.md",
+                "file": "Linux云计算/openstack vs  k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书笔记/刘强东牛津演讲.md",
+                "file": "Linux云计算/openstack vs  k8s.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/刘强东牛津演讲.md"
+                "file": "Linux云计算/openstack vs  k8s.md"
               }
             }
           },
@@ -205,11 +205,16 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "Linux云计算/文件操作.md",
+    "Linux云计算/openstack vs  k8s.md",
+    "go语言/流媒体/第一章  项目介绍.md",
+    "go语言/流媒体/第二章  复习go工具链.md",
+    "go语言/算法/关于算法.md",
+    "读书笔记/刘强东牛津演讲.md",
+    "go语言/流媒体",
     "读书笔记/放下即幸福.md",
     "读书笔记/生命卡点.md",
-    "读书笔记/刘强东牛津演讲.md",
     "读书笔记/读书笔记~聊聊读书.md",
-    "go语言/算法/关于算法.md",
     "Linux云计算/docker/回顾.md",
     "Linux云计算/docker/认识docker和虚拟化.md",
     "Linux云计算/docker/docker镜像.md",
@@ -227,10 +232,6 @@
     "python/py~聊聊Python在我工作中的应用.md",
     "个人随笔/聊聊目前国内的互联网环境.md",
     "go语言/go基础语法/函数学习笔记(知乎).md",
-    "go语言/go web/gin文件上传.md",
-    "go语言/go基础语法/函数基础篇.md",
-    "go语言/go基础语法/值recevier和指针型recevier.md",
-    "go语言/go基础语法/swtich-case.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
