@@ -11,6 +11,7 @@ categories : [
      "Linux云计算",
  ]
 ---
+## 问题1
 报错信息如下(<font color="#ffc000">这个报错不止遇到过一次了</font>)
 
 ```csharp
@@ -30,4 +31,11 @@ systemctl restart NetworkManager
 
 这个错误我遇到过两次，第一次不是因为上面的原因。第二次则是按照上面方法解决的。这是我在准备k8s搭建的时候使用VMware 安装虚拟机遇到的错误。
 [参考链接](https://www.cnblogs.com/yadongliang/p/14124031.html)  这个链接后面还有一些nmcli的命令，可以参考一下。
+
+## 问题2
+VMware 虚拟机可以获取到ip，但无法ping 通外网。可以ping通同网段，但是<font color="#92d050">ping 8.8.8.8 和114不通。说明无法解析外网，也无法通外网</font>。我对比了一下，觉得还是网关和dns的问题。但dns查看后配置的和正常的一样。<font color="#92d050">注意断开代理</font>。
+
+![](/linux基础/20230613210227.png)
+
+最后解决方法，nmtui，选择网卡。其他改成自动获取，ip要写死。这是为了防止ip后面变化。
 
