@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/ansible.md",
+                "file": "Linux云计算/docker/如何降低docker版本.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/ansible.md",
+                "file": "Linux云计算/docker/如何降低docker版本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/ansible.md",
+                "file": "Linux云计算/docker/如何降低docker版本.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/ansible.md"
+                "file": "Linux云计算/docker/如何降低docker版本.md"
               }
             }
           },
@@ -186,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "254de0681f7d3ba2",
@@ -223,12 +223,18 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "Linux云计算/docker/docker与pod冲突.md",
+    "Linux云计算/docker/如何降低docker版本.md",
+    "Linux云计算/docker/docker容器管理.md",
+    "Linux云计算/docker/回顾.md",
+    "Linux云计算/openstack vs  k8s.md",
     "Linux云计算/docker/dockerfile.md",
+    "Linux云计算/那些年，我搭过的环境.md",
+    "Linux云计算/ansible.md",
     "Linux云计算/常用的网络协议.md",
     "Linux云计算/文件操作.md",
     "Linux云计算/解决VMware centos8 网络问题.md",
     "Linux云计算/docker/认识docker和虚拟化.md",
-    "Linux云计算/那些年，我搭过的环境.md",
     "个人随笔/聊聊我折腾过的笔记软件.md",
     "个人随笔/阅读指南.md",
     "个人随笔/聊聊那些年我折腾过的博客.md",
@@ -236,20 +242,14 @@
     "python/py~聊聊Python在我工作中的应用.md",
     "go语言/流媒体/第二章  复习go工具链.md",
     "go语言/流媒体/第一章  项目介绍.md",
-    "Linux云计算/openstack vs  k8s.md",
     "go语言/算法/关于算法.md",
     "读书笔记/刘强东牛津演讲.md",
     "go语言/流媒体",
     "读书笔记/放下即幸福.md",
     "读书笔记/生命卡点.md",
     "读书笔记/读书笔记~聊聊读书.md",
-    "Linux云计算/docker/回顾.md",
     "Linux云计算/docker/docker镜像.md",
     "读书笔记/以幽默的方式过一生.md",
-    "读书笔记/读书笔记~暖暖的相伴.md",
-    "读书笔记/读书笔记~俞敏洪演讲.md",
-    "读书笔记/自愈力.md",
-    "go语言/并发编程进阶篇.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
