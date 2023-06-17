@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/docker/如何降低docker版本.md",
+                "file": "Linux云计算/docker/使用yum安装docker.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/docker/如何降低docker版本.md",
+                "file": "Linux云计算/docker/使用yum安装docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/docker/如何降低docker版本.md",
+                "file": "Linux云计算/docker/使用yum安装docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/docker/如何降低docker版本.md"
+                "file": "Linux云计算/docker/使用yum安装docker.md"
               }
             }
           },
@@ -223,16 +223,24 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
-    "Linux云计算/docker/docker与pod冲突.md",
-    "Linux云计算/docker/如何降低docker版本.md",
-    "Linux云计算/docker/docker容器管理.md",
+    "Linux云计算/docker/使用docker部署网站.md",
+    "Linux云计算/docker/使用yum安装docker.md",
+    "Linux云计算/解决centos8 源报错问题.md",
+    "Linux云计算/文件操作.md",
+    "Linux云计算/那些年，我搭过的环境.md",
+    "Linux云计算/关于root权限的问题.md",
+    "Linux云计算/如何判断主机是物理服务器还是虚拟机.md",
     "Linux云计算/docker/回顾.md",
+    "Linux云计算/vi命令学习.md",
+    "Linux云计算/sed与awk.md",
+    "Linux云计算/云服务器分区.md",
+    "Linux云计算/docker/如何降低docker版本.md",
+    "Linux云计算/docker/docker与pod冲突.md",
+    "Linux云计算/docker/docker容器管理.md",
     "Linux云计算/openstack vs  k8s.md",
     "Linux云计算/docker/dockerfile.md",
-    "Linux云计算/那些年，我搭过的环境.md",
     "Linux云计算/ansible.md",
     "Linux云计算/常用的网络协议.md",
-    "Linux云计算/文件操作.md",
     "Linux云计算/解决VMware centos8 网络问题.md",
     "Linux云计算/docker/认识docker和虚拟化.md",
     "个人随笔/聊聊我折腾过的笔记软件.md",
@@ -241,15 +249,7 @@
     "个人随笔/聊聊目前国内的互联网环境.md",
     "python/py~聊聊Python在我工作中的应用.md",
     "go语言/流媒体/第二章  复习go工具链.md",
-    "go语言/流媒体/第一章  项目介绍.md",
-    "go语言/算法/关于算法.md",
-    "读书笔记/刘强东牛津演讲.md",
     "go语言/流媒体",
-    "读书笔记/放下即幸福.md",
-    "读书笔记/生命卡点.md",
-    "读书笔记/读书笔记~聊聊读书.md",
-    "Linux云计算/docker/docker镜像.md",
-    "读书笔记/以幽默的方式过一生.md",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
     "个人随笔",
