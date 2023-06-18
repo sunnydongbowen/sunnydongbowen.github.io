@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人随笔/聊聊目前国内的互联网环境.md",
+                "file": "Linux云计算/k8s/安装报错记录.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人随笔/聊聊目前国内的互联网环境.md",
+                "file": "Linux云计算/k8s/安装报错记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人随笔/聊聊目前国内的互联网环境.md",
+                "file": "Linux云计算/k8s/安装报错记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "个人随笔/聊聊目前国内的互联网环境.md"
+                "file": "Linux云计算/k8s/安装报错记录.md"
               }
             }
           },
@@ -223,9 +223,9 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "个人随笔/聊聊目前国内的互联网环境.md",
     "go语言/算法/关于算法.md",
     "go语言/并发编程基础篇.md",
-    "个人随笔/聊聊目前国内的互联网环境.md",
     "Linux云计算/k8s/安装报错记录.md",
     "Linux云计算/docker/docker与pod冲突.md",
     "Linux云计算/k8s",
