@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bil",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -223,6 +223,9 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "go语言/算法/关于算法.md",
+    "go语言/并发编程基础篇.md",
+    "个人随笔/聊聊目前国内的互联网环境.md",
     "Linux云计算/k8s/安装报错记录.md",
     "Linux云计算/docker/docker与pod冲突.md",
     "Linux云计算/k8s",
@@ -247,9 +250,6 @@
     "Linux云计算/docker/认识docker和虚拟化.md",
     "个人随笔/聊聊我折腾过的笔记软件.md",
     "个人随笔/阅读指南.md",
-    "个人随笔/聊聊那些年我折腾过的博客.md",
-    "个人随笔/聊聊目前国内的互联网环境.md",
-    "python/py~聊聊Python在我工作中的应用.md",
     "go语言/流媒体",
     "Untitled.canvas",
     "Linux云计算/docker/回顾",
