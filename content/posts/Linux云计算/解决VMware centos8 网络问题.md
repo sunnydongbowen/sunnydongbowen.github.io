@@ -33,7 +33,8 @@ systemctl restart NetworkManager
 [参考链接](https://www.cnblogs.com/yadongliang/p/14124031.html)  这个链接后面还有一些nmcli的命令，可以参考一下。
 
 ## 问题2
-VMware 虚拟机可以获取到ip，但无法ping 通外网。可以ping通同网段，但是<font color="#92d050">ping 8.8.8.8 和114不通。说明无法解析外网，也无法通外网</font>。我对比了一下，觉得还是网关和dns的问题。但dns查看后配置的和正常的一样。<font color="#92d050">注意断开代理</font>。
+---
+VMware 虚拟机可以获取到ip，但无法ping 通外网。可以ping通同网段，但<font color="#92d050">ping 8.8.8.8 和114不通。说明无法解析外网，也无法通外网</font>。我对比了一下，觉得还是网关和dns的问题。但dns查看后配置的和正常的一样。<font color="#92d050">注意断开代理</font>。
 
 ![](/linux基础/20230613210227.png)
 
