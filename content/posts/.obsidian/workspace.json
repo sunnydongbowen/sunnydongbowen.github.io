@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/机器码获取.md",
+                "file": "Linux云计算/换行与交互.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bil",
+                "query": "换行",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -123,7 +123,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/机器码获取.md",
+                "file": "Linux云计算/换行与交互.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/机器码获取.md",
+                "file": "Linux云计算/换行与交互.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/机器码获取.md"
+                "file": "Linux云计算/换行与交互.md"
               }
             }
           },
@@ -223,9 +223,9 @@
   },
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
+    "Linux云计算/机器码获取.md",
     "Linux云计算/文件操作.md",
     "Linux云计算/查看系统架构和操作系统版本.md",
-    "Linux云计算/机器码获取.md",
     "Linux云计算/查看cpu和内存.md",
     "Linux云计算/shutdown与hault.md",
     "Linux云计算/换行与交互.md",
