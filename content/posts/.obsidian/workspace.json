@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/rpm常用命令.md",
+                "file": "Linux云计算/修改系统时间.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/rpm常用命令.md",
+                "file": "Linux云计算/修改系统时间.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/rpm常用命令.md",
+                "file": "Linux云计算/修改系统时间.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/rpm常用命令.md"
+                "file": "Linux云计算/修改系统时间.md"
               }
             }
           },
@@ -224,6 +224,12 @@
   "active": "d4ce0c8279a9bfdd",
   "lastOpenFiles": [
     "Linux云计算/shutdown与hault.md",
+    "Linux云计算/k8s/B站k8s学习笔记.md",
+    "go语言/算法/关于算法.md",
+    "Linux云计算/k8s/安装报错记录.md",
+    "Linux云计算/tcpdump使用.md",
+    "Linux云计算/文件操作.md",
+    "Linux云计算/vi命令学习.md",
     "Linux云计算/rpm常用命令.md",
     "Linux云计算/wc命令.md",
     "Linux云计算/那些年，我搭过的环境.md",
@@ -232,23 +238,17 @@
     "Linux云计算/解决centos8 源报错问题.md",
     "Linux云计算/查看系统架构和操作系统版本.md",
     "Linux云计算/换行与交互.md",
-    "Linux云计算/文件操作.md",
     "Linux云计算/查看cpu和内存.md",
     "Linux云计算/关于root权限的问题.md",
     "Linux云计算/make和make install.md",
     "Linux云计算/reload.md",
-    "Linux云计算/k8s/安装报错记录.md",
     "Linux云计算/sed与awk.md",
     "Linux云计算/history命令.md",
     "Linux云计算/openstack vs  k8s.md",
     "Linux云计算/echo.md",
-    "Linux云计算/vi命令学习.md",
     "Linux云计算/云服务器分区.md",
     "Linux云计算/rm命令.md",
     "Linux云计算/ansible.md",
-    "Linux云计算/解决VMware centos8 网络问题.md",
-    "Linux云计算/如何判断主机是物理服务器还是虚拟机.md",
-    "Linux云计算/常用的网络协议.md",
     "Linux云计算/k8s",
     "go语言/流媒体",
     "Untitled.canvas",
