@@ -12,7 +12,7 @@ categories : [
  ]
 ---
 
->  ✍️ 在工作中，如果服务端操作系统是centos系列，会经常用到rpm命令，安装，升级软件包等
+>  ✍️ 在工作中，如果服务端操作系统是centos系列，会经常用到rpm命令，<font color="#ffc000">安装、升级、卸载软件包等</font>
 
 - 卸载
 ```bash
@@ -33,7 +33,7 @@ rpm -ivh   ...  --force
 
 - 查看某个文件是哪个包安装产生的
 ```bash
-[root@os80 ~]# rpm -qf /usr/share/openstack-puppet/modules/glance/manifests/api.pp
+rpm -qf /usr/share/openstack-puppet/modules/glance/manifests/api.pp
 puppet-glance-13.3.1-1.el7.noarch
 ```
 

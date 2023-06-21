@@ -40,13 +40,12 @@ root     pts/0        2021-10-29 13:33 (192.168.1.16)
 root     pts/2        2021-10-29 11:34 (192.168.1.16)
 ```
 
-不记忆方法
+不记忆方法，<font color="#ffc000">这个做坏事用的，哈哈</font>。
 ```bash
 
 vim /etc/profile
 HISTCONTROL=ignorespace  #加入这一行
 
-**source /etc/profile**
+source /etc/profile
 ```
-
-在输入的命令前，可以打一个空格，这样是不记录这条命令的
+在输入的命令前，<font color="#00b050">可以打一个空格，这样是不记录这条命令的</font>

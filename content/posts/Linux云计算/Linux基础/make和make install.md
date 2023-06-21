@@ -21,7 +21,7 @@ categories : [
 ## 1. configure
 ---
 这一步一般用来生成 Makefile，为下一步的编译做准备，你可以通过在 configure 后加上参数来对安装进行控制，比如代码:`./configure --prefix=/usr`上面的意思是将该软件安装在 /usr 下面，执行文件就会安装在 /usr/bin.同时一些软件的配置文件你可以通过指定 --sys-config= 参数进行设定。有一些软件还可以加上 --with、--enable、--without、--disable 等等参数对编译加以控制，你可以通过允许 ./configure --help 察看详细的说明帮助。
-> 注意root权限的问题。如果用户是普通用户，则要指定目录，不要用默认目录。会报权限的错误。 [ViennaRNA安装](https://github.com/ViennaRNA/ViennaRNA)  这是我在安装这个的时候遇到的。  
+> <font color="#00b050">注意root权限的问题</font>。如果用户是普通用户，则要指定目录，不要用默认目录。会报权限的错误。 [ViennaRNA安装](https://github.com/ViennaRNA/ViennaRNA)  这是我在安装这个的时候遇到的。  
 
 ## 2. make
 ---
@@ -31,3 +31,5 @@ make 是 Linux 开发套件里面自动化编译的一个控制程序，他通�
 ## 3. make install
 ---
 这条命令来进行安装（当然有些软件需要先运行 make check 或 make test来进行一些测试），这一步一般需要你有 **root 权限**（因为要向系统写入文件）
+
+> make 命令通常拿来编译安装源码型的项目。后面做go类似的项目或许也会遇到。通常c类型的项目居多。
