@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux云计算/Linux基础/解决VMware centos8 网络问题.md",
+                "file": "Linux云计算/shell/echo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vm",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -123,7 +123,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -136,7 +136,7 @@
       {
         "id": "b55a3ff69e465cb3",
         "type": "tabs",
-        "dimension": 76.52582159624414,
+        "dimension": 76.52582159624413,
         "children": [
           {
             "id": "fa4f8511a6c8384d",
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux云计算/Linux基础/解决VMware centos8 网络问题.md",
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux云计算/Linux基础/解决VMware centos8 网络问题.md",
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux云计算/Linux基础/解决VMware centos8 网络问题.md"
+                "file": "个人随笔/聊聊我折腾过的笔记软件.md"
               }
             }
           },
@@ -191,7 +191,7 @@
       {
         "id": "254de0681f7d3ba2",
         "type": "tabs",
-        "dimension": 23.474178403755868,
+        "dimension": 23.474178403755865,
         "children": [
           {
             "id": "b17623212d3f83b4",
@@ -221,8 +221,13 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "d4ce0c8279a9bfdd",
+  "active": "30389e5e365acefa",
   "lastOpenFiles": [
+    "Linux云计算/Linux基础/ps命令.md",
+    "go语言/go基础语法/值recevier和指针型recevier.md",
+    "go语言/go基础语法/swtich-case.md",
+    "Linux云计算/Linux基础/如何退出top命令.md",
+    "Linux云计算/Linux基础/解决VMware centos8 网络问题.md",
     "Linux云计算/Linux基础/移除升级内核产生的文件.md",
     "Linux云计算/Linux基础/网卡闪烁识别.md",
     "Linux云计算/Linux基础/查看端口.md",
@@ -236,7 +241,6 @@
     "Linux云计算/Linux基础/查看系统架构和操作系统版本.md",
     "Linux云计算/k8s/openstack vs  k8s.md",
     "Linux云计算/Linux基础/rm命令.md",
-    "Linux云计算/Linux基础/解决VMware centos8 网络问题.md",
     "Linux云计算/Linux基础/文件操作.md",
     "Linux云计算/Linux基础/常用的网络协议.md",
     "Linux云计算/Linux基础/换行与交互.md",
@@ -245,10 +249,6 @@
     "Linux云计算/Linux基础/云服务器分区.md",
     "Linux云计算/Linux基础/机器码获取.md",
     "Linux云计算/ansible.md",
-    "Linux云计算/shell/wc命令.md",
-    "Linux云计算/Linux基础/history命令.md",
-    "Linux云计算/Linux基础/修改系统时间.md",
-    "Linux云计算/Linux基础/如何判断主机是物理服务器还是虚拟机.md",
     "Linux云计算/Linux基础",
     "Linux云计算/shell",
     "Linux云计算/k8s",

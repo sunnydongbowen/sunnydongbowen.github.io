@@ -27,7 +27,7 @@ test test.txt
 test
 ```
 
-- > > ，类似python的a模式
+- “> >” ，类似python的a模式
 ```bash
 [root@os55 ~]# ls >> test.txt
 [root@os55 ~]# cat test.txt
