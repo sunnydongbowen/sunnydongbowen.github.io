@@ -1,15 +1,6 @@
 ---
 title: "gin~示例及restfulAPI"                         
-author: "博文"      
-comments: true 
- 
-tags : [                                    
-     "Go Web",
- ]
-categories : [                              
-     "Go语言",
- ]
-date: 2023-03-30
+
 ---
 
 > ✏️ 观看[李文周博客](https://www.liwenzhou.com/posts/Go/gin/#autoid-0-0-0)及七米视频作的笔记，这是看的我自己notion笔记又把代码敲了一遍。
@@ -25,13 +16,11 @@ gin优点是**简单**，**轻量**，**好用**，**快速**，用到什么再�
 gin目前是我正儿八经学过的第一个web框架，确实很好用！不是硬性要求用别的框架，一直用gin即可。py里的web框架真的是多。Django，fastapi，flask, 还有很多！目前做web类的，我还是偏向go去做。gin不错的！看原理实现, 其他别学了; gin用的溜就已经很可以了！研究好了甚至可以给它提pr之类的！看看gin社区！
 
 下载并安装`Gin`  记得`go mod tidy`一下。
-
 ```go
 go get -u github.com/gin-gonic/gin
 ```
 
 ## 第一个demo
-
 ```go
 func TestGindemo1(t *testing.T) {
 	// 创建默认的路由引擎
